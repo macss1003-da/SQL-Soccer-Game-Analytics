@@ -1,0 +1,239 @@
+{
+  "source_sha256": "4df8569777d59fdd690754b1cc8ca1f7989baf65f2eaddd0f1368285f11139a9",
+  "source_bytes": 313090048,
+  "sqlite_version": "3.53.1",
+  "integrity_check": "ok",
+  "sql_statements_executed": 52,
+  "source_unchanged": true,
+  "validation_failures": [],
+  "outputs": [
+    {
+      "result": "sqlite_version",
+      "sql_file": "sql/00_inspect_database.sql",
+      "statement": 1,
+      "rows": 1
+    },
+    {
+      "result": "schema_objects",
+      "sql_file": "sql/00_inspect_database.sql",
+      "statement": 2,
+      "rows": 7
+    },
+    {
+      "result": "schema_columns",
+      "sql_file": "sql/00_inspect_database.sql",
+      "statement": 3,
+      "rows": 199
+    },
+    {
+      "result": "schema_foreign_keys",
+      "sql_file": "sql/00_inspect_database.sql",
+      "statement": 4,
+      "rows": 31
+    },
+    {
+      "result": "schema_ddl",
+      "sql_file": "sql/00_inspect_database.sql",
+      "statement": 5,
+      "rows": 7
+    },
+    {
+      "result": "table_counts",
+      "sql_file": "sql/00_inspect_database.sql",
+      "statement": 6,
+      "rows": 7
+    },
+    {
+      "result": "core_table_counts",
+      "sql_file": "sql/01_profile_core.sql",
+      "statement": 1,
+      "rows": 4
+    },
+    {
+      "result": "raw_coverage",
+      "sql_file": "sql/01_profile_core.sql",
+      "statement": 2,
+      "rows": 88
+    },
+    {
+      "result": "core_missing_values",
+      "sql_file": "sql/01_profile_core.sql",
+      "statement": 3,
+      "rows": 1
+    },
+    {
+      "result": "score_date_validity",
+      "sql_file": "sql/01_profile_core.sql",
+      "statement": 4,
+      "rows": 1
+    },
+    {
+      "result": "duplicate_match_ids",
+      "sql_file": "sql/01_profile_core.sql",
+      "statement": 5,
+      "rows": 0
+    },
+    {
+      "result": "duplicate_dimension_keys",
+      "sql_file": "sql/01_profile_core.sql",
+      "statement": 6,
+      "rows": 0
+    },
+    {
+      "result": "relationship_checks",
+      "sql_file": "sql/01_profile_core.sql",
+      "statement": 7,
+      "rows": 1
+    },
+    {
+      "result": "duplicate_fixtures",
+      "sql_file": "sql/01_profile_core.sql",
+      "statement": 8,
+      "rows": 0
+    },
+    {
+      "result": "coverage_audit",
+      "sql_file": "sql/02_coverage_audit.sql",
+      "statement": 1,
+      "rows": 88
+    },
+    {
+      "result": "view_validation",
+      "sql_file": "sql/04_validate_views.sql",
+      "statement": 1,
+      "rows": 10
+    },
+    {
+      "result": "accepted_rows",
+      "sql_file": "sql/04_validate_views.sql",
+      "statement": 2,
+      "rows": 1
+    },
+    {
+      "result": "first_analysis",
+      "sql_file": "sql/05_first_analysis.sql",
+      "statement": 1,
+      "rows": 8
+    },
+    {
+      "result": "06_extension_audit_01",
+      "sql_file": "sql/06_extension_audit.sql",
+      "statement": 1,
+      "rows": 2
+    },
+    {
+      "result": "06_extension_audit_02",
+      "sql_file": "sql/06_extension_audit.sql",
+      "statement": 2,
+      "rows": 2
+    },
+    {
+      "result": "06_extension_audit_03",
+      "sql_file": "sql/06_extension_audit.sql",
+      "statement": 3,
+      "rows": 3
+    },
+    {
+      "result": "06_extension_audit_04",
+      "sql_file": "sql/06_extension_audit.sql",
+      "statement": 4,
+      "rows": 11
+    },
+    {
+      "result": "overview",
+      "sql_file": "sql/08_overview_and_leagues.sql",
+      "statement": 1,
+      "rows": 1
+    },
+    {
+      "result": "league_summary",
+      "sql_file": "sql/08_overview_and_leagues.sql",
+      "statement": 2,
+      "rows": 11
+    },
+    {
+      "result": "stable_league_comparison",
+      "sql_file": "sql/08_overview_and_leagues.sql",
+      "statement": 3,
+      "rows": 5
+    },
+    {
+      "result": "league_season",
+      "sql_file": "sql/09_season_trends.sql",
+      "statement": 1,
+      "rows": 88
+    },
+    {
+      "result": "premier_league_seasons",
+      "sql_file": "sql/09_season_trends.sql",
+      "statement": 2,
+      "rows": 8
+    },
+    {
+      "result": "stable_sample_season_trend",
+      "sql_file": "sql/09_season_trends.sql",
+      "statement": 3,
+      "rows": 8
+    },
+    {
+      "result": "team_season_rankings",
+      "sql_file": "sql/10_team_rankings.sql",
+      "statement": 1,
+      "rows": 1481
+    },
+    {
+      "result": "league_season_ppg_leaders",
+      "sql_file": "sql/10_team_rankings.sql",
+      "statement": 2,
+      "rows": 90
+    },
+    {
+      "result": "premier_league_2015_16",
+      "sql_file": "sql/10_team_rankings.sql",
+      "statement": 3,
+      "rows": 20
+    },
+    {
+      "result": "team_home_away",
+      "sql_file": "sql/11_home_away.sql",
+      "statement": 1,
+      "rows": 1481
+    },
+    {
+      "result": "premier_league_largest_home_gaps",
+      "sql_file": "sql/11_home_away.sql",
+      "statement": 2,
+      "rows": 10
+    },
+    {
+      "result": "premier_league_2015_16_home_away",
+      "sql_file": "sql/11_home_away.sql",
+      "statement": 3,
+      "rows": 20
+    },
+    {
+      "result": "consecutive_season_changes",
+      "sql_file": "sql/12_consecutive_season_changes.sql",
+      "statement": 1,
+      "rows": 1110
+    },
+    {
+      "result": "premier_league_improvements",
+      "sql_file": "sql/12_consecutive_season_changes.sql",
+      "statement": 2,
+      "rows": 10
+    },
+    {
+      "result": "stable_sample_improvements",
+      "sql_file": "sql/12_consecutive_season_changes.sql",
+      "statement": 3,
+      "rows": 10
+    },
+    {
+      "result": "aggregate_validation",
+      "sql_file": "sql/13_validate_aggregates.sql",
+      "statement": 1,
+      "rows": 12
+    }
+  ]
+}

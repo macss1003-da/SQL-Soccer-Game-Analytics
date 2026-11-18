@@ -1,0 +1,10 @@
+{
+  "pages": 5,
+  "visuals": 76,
+  "tables": 50,
+  "raw_result_tables": 38,
+  "measures": 44,
+  "relationships": 8,
+  "portable_embedded_data": true,
+  "native_power_bi_desktop_tested": false
+}

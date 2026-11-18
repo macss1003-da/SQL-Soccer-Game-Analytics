@@ -1,0 +1,5872 @@
+{
+  "source_filename": "database.sqlite",
+  "source_bytes": 313090048,
+  "sha256": "4df8569777d59fdd690754b1cc8ca1f7989baf65f2eaddd0f1368285f11139a9",
+  "sqlite_version": "3.53.1",
+  "quick_check": [
+    {
+      "quick_check": "ok"
+    }
+  ],
+  "tables": {
+    "Country": {
+      "row_count": 11,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "id",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "name",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "foreign_keys": [],
+      "ddl": "CREATE TABLE `Country` (\n\t`id`\tINTEGER PRIMARY KEY AUTOINCREMENT,\n\t`name`\tTEXT UNIQUE\n)",
+      "null_counts": {
+        "id": 0,
+        "name": 0
+      },
+      "nonnull_string_blanks": {
+        "id": 0,
+        "name": 0
+      }
+    },
+    "League": {
+      "row_count": 11,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "id",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "country_id",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "name",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "foreign_keys": [
+        {
+          "id": 0,
+          "seq": 0,
+          "table": "country",
+          "from": "country_id",
+          "to": "id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION",
+          "match": "NONE"
+        }
+      ],
+      "ddl": "CREATE TABLE `League` (\n\t`id`\tINTEGER PRIMARY KEY AUTOINCREMENT,\n\t`country_id`\tINTEGER,\n\t`name`\tTEXT UNIQUE,\n\tFOREIGN KEY(`country_id`) REFERENCES `country`(`id`)\n)",
+      "null_counts": {
+        "id": 0,
+        "country_id": 0,
+        "name": 0
+      },
+      "nonnull_string_blanks": {
+        "id": 0,
+        "country_id": 0,
+        "name": 0
+      }
+    },
+    "Match": {
+      "row_count": 25979,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "id",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "country_id",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "league_id",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "season",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 4,
+          "name": "stage",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 5,
+          "name": "date",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 6,
+          "name": "match_api_id",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 7,
+          "name": "home_team_api_id",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 8,
+          "name": "away_team_api_id",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 9,
+          "name": "home_team_goal",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 10,
+          "name": "away_team_goal",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 11,
+          "name": "home_player_X1",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 12,
+          "name": "home_player_X2",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 13,
+          "name": "home_player_X3",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 14,
+          "name": "home_player_X4",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 15,
+          "name": "home_player_X5",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 16,
+          "name": "home_player_X6",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 17,
+          "name": "home_player_X7",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 18,
+          "name": "home_player_X8",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 19,
+          "name": "home_player_X9",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 20,
+          "name": "home_player_X10",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 21,
+          "name": "home_player_X11",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 22,
+          "name": "away_player_X1",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 23,
+          "name": "away_player_X2",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 24,
+          "name": "away_player_X3",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 25,
+          "name": "away_player_X4",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 26,
+          "name": "away_player_X5",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 27,
+          "name": "away_player_X6",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 28,
+          "name": "away_player_X7",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 29,
+          "name": "away_player_X8",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 30,
+          "name": "away_player_X9",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 31,
+          "name": "away_player_X10",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 32,
+          "name": "away_player_X11",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 33,
+          "name": "home_player_Y1",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 34,
+          "name": "home_player_Y2",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 35,
+          "name": "home_player_Y3",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 36,
+          "name": "home_player_Y4",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 37,
+          "name": "home_player_Y5",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 38,
+          "name": "home_player_Y6",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 39,
+          "name": "home_player_Y7",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 40,
+          "name": "home_player_Y8",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 41,
+          "name": "home_player_Y9",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 42,
+          "name": "home_player_Y10",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 43,
+          "name": "home_player_Y11",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 44,
+          "name": "away_player_Y1",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 45,
+          "name": "away_player_Y2",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 46,
+          "name": "away_player_Y3",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 47,
+          "name": "away_player_Y4",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 48,
+          "name": "away_player_Y5",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 49,
+          "name": "away_player_Y6",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 50,
+          "name": "away_player_Y7",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 51,
+          "name": "away_player_Y8",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 52,
+          "name": "away_player_Y9",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 53,
+          "name": "away_player_Y10",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 54,
+          "name": "away_player_Y11",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 55,
+          "name": "home_player_1",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 56,
+          "name": "home_player_2",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 57,
+          "name": "home_player_3",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 58,
+          "name": "home_player_4",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 59,
+          "name": "home_player_5",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 60,
+          "name": "home_player_6",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 61,
+          "name": "home_player_7",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 62,
+          "name": "home_player_8",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 63,
+          "name": "home_player_9",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 64,
+          "name": "home_player_10",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 65,
+          "name": "home_player_11",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 66,
+          "name": "away_player_1",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 67,
+          "name": "away_player_2",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 68,
+          "name": "away_player_3",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 69,
+          "name": "away_player_4",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 70,
+          "name": "away_player_5",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 71,
+          "name": "away_player_6",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 72,
+          "name": "away_player_7",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 73,
+          "name": "away_player_8",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 74,
+          "name": "away_player_9",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 75,
+          "name": "away_player_10",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 76,
+          "name": "away_player_11",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 77,
+          "name": "goal",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 78,
+          "name": "shoton",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 79,
+          "name": "shotoff",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 80,
+          "name": "foulcommit",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 81,
+          "name": "card",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 82,
+          "name": "cross",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 83,
+          "name": "corner",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 84,
+          "name": "possession",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 85,
+          "name": "B365H",
+          "type": "NUMERIC",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 86,
+          "name": "B365D",
+          "type": "NUMERIC",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 87,
+          "name": "B365A",
+          "type": "NUMERIC",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 88,
+          "name": "BWH",
+          "type": "NUMERIC",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 89,
+          "name": "BWD",
+          "type": "NUMERIC",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 90,
+          "name": "BWA",
+          "type": "NUMERIC",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 91,
+          "name": "IWH",
+          "type": "NUMERIC",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 92,
+          "name": "IWD",
+          "type": "NUMERIC",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 93,
+          "name": "IWA",
+          "type": "NUMERIC",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 94,
+          "name": "LBH",
+          "type": "NUMERIC",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 95,
+          "name": "LBD",
+          "type": "NUMERIC",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 96,
+          "name": "LBA",
+          "type": "NUMERIC",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 97,
+          "name": "PSH",
+          "type": "NUMERIC",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 98,
+          "name": "PSD",
+          "type": "NUMERIC",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 99,
+          "name": "PSA",
+          "type": "NUMERIC",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 100,
+          "name": "WHH",
+          "type": "NUMERIC",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 101,
+          "name": "WHD",
+          "type": "NUMERIC",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 102,
+          "name": "WHA",
+          "type": "NUMERIC",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 103,
+          "name": "SJH",
+          "type": "NUMERIC",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 104,
+          "name": "SJD",
+          "type": "NUMERIC",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 105,
+          "name": "SJA",
+          "type": "NUMERIC",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 106,
+          "name": "VCH",
+          "type": "NUMERIC",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 107,
+          "name": "VCD",
+          "type": "NUMERIC",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 108,
+          "name": "VCA",
+          "type": "NUMERIC",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 109,
+          "name": "GBH",
+          "type": "NUMERIC",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 110,
+          "name": "GBD",
+          "type": "NUMERIC",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 111,
+          "name": "GBA",
+          "type": "NUMERIC",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 112,
+          "name": "BSH",
+          "type": "NUMERIC",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 113,
+          "name": "BSD",
+          "type": "NUMERIC",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 114,
+          "name": "BSA",
+          "type": "NUMERIC",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "foreign_keys": [
+        {
+          "id": 0,
+          "seq": 0,
+          "table": "Player",
+          "from": "away_player_11",
+          "to": "player_api_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION",
+          "match": "NONE"
+        },
+        {
+          "id": 1,
+          "seq": 0,
+          "table": "Player",
+          "from": "away_player_10",
+          "to": "player_api_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION",
+          "match": "NONE"
+        },
+        {
+          "id": 2,
+          "seq": 0,
+          "table": "Player",
+          "from": "away_player_9",
+          "to": "player_api_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION",
+          "match": "NONE"
+        },
+        {
+          "id": 3,
+          "seq": 0,
+          "table": "Player",
+          "from": "away_player_8",
+          "to": "player_api_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION",
+          "match": "NONE"
+        },
+        {
+          "id": 4,
+          "seq": 0,
+          "table": "Player",
+          "from": "away_player_7",
+          "to": "player_api_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION",
+          "match": "NONE"
+        },
+        {
+          "id": 5,
+          "seq": 0,
+          "table": "Player",
+          "from": "away_player_6",
+          "to": "player_api_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION",
+          "match": "NONE"
+        },
+        {
+          "id": 6,
+          "seq": 0,
+          "table": "Player",
+          "from": "away_player_5",
+          "to": "player_api_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION",
+          "match": "NONE"
+        },
+        {
+          "id": 7,
+          "seq": 0,
+          "table": "Player",
+          "from": "away_player_4",
+          "to": "player_api_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION",
+          "match": "NONE"
+        },
+        {
+          "id": 8,
+          "seq": 0,
+          "table": "Player",
+          "from": "away_player_3",
+          "to": "player_api_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION",
+          "match": "NONE"
+        },
+        {
+          "id": 9,
+          "seq": 0,
+          "table": "Player",
+          "from": "away_player_2",
+          "to": "player_api_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION",
+          "match": "NONE"
+        },
+        {
+          "id": 10,
+          "seq": 0,
+          "table": "Player",
+          "from": "away_player_1",
+          "to": "player_api_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION",
+          "match": "NONE"
+        },
+        {
+          "id": 11,
+          "seq": 0,
+          "table": "Player",
+          "from": "home_player_11",
+          "to": "player_api_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION",
+          "match": "NONE"
+        },
+        {
+          "id": 12,
+          "seq": 0,
+          "table": "Player",
+          "from": "home_player_10",
+          "to": "player_api_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION",
+          "match": "NONE"
+        },
+        {
+          "id": 13,
+          "seq": 0,
+          "table": "Player",
+          "from": "home_player_9",
+          "to": "player_api_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION",
+          "match": "NONE"
+        },
+        {
+          "id": 14,
+          "seq": 0,
+          "table": "Player",
+          "from": "home_player_8",
+          "to": "player_api_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION",
+          "match": "NONE"
+        },
+        {
+          "id": 15,
+          "seq": 0,
+          "table": "Player",
+          "from": "home_player_7",
+          "to": "player_api_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION",
+          "match": "NONE"
+        },
+        {
+          "id": 16,
+          "seq": 0,
+          "table": "Player",
+          "from": "home_player_6",
+          "to": "player_api_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION",
+          "match": "NONE"
+        },
+        {
+          "id": 17,
+          "seq": 0,
+          "table": "Player",
+          "from": "home_player_5",
+          "to": "player_api_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION",
+          "match": "NONE"
+        },
+        {
+          "id": 18,
+          "seq": 0,
+          "table": "Player",
+          "from": "home_player_4",
+          "to": "player_api_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION",
+          "match": "NONE"
+        },
+        {
+          "id": 19,
+          "seq": 0,
+          "table": "Player",
+          "from": "home_player_3",
+          "to": "player_api_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION",
+          "match": "NONE"
+        },
+        {
+          "id": 20,
+          "seq": 0,
+          "table": "Player",
+          "from": "home_player_2",
+          "to": "player_api_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION",
+          "match": "NONE"
+        },
+        {
+          "id": 21,
+          "seq": 0,
+          "table": "Player",
+          "from": "home_player_1",
+          "to": "player_api_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION",
+          "match": "NONE"
+        },
+        {
+          "id": 22,
+          "seq": 0,
+          "table": "Team",
+          "from": "away_team_api_id",
+          "to": "team_api_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION",
+          "match": "NONE"
+        },
+        {
+          "id": 23,
+          "seq": 0,
+          "table": "Team",
+          "from": "home_team_api_id",
+          "to": "team_api_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION",
+          "match": "NONE"
+        },
+        {
+          "id": 24,
+          "seq": 0,
+          "table": "League",
+          "from": "league_id",
+          "to": "id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION",
+          "match": "NONE"
+        },
+        {
+          "id": 25,
+          "seq": 0,
+          "table": "country",
+          "from": "country_id",
+          "to": "id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION",
+          "match": "NONE"
+        }
+      ],
+      "ddl": "CREATE TABLE `Match` (\n\t`id`\tINTEGER PRIMARY KEY AUTOINCREMENT,\n\t`country_id`\tINTEGER,\n\t`league_id`\tINTEGER,\n\t`season`\tTEXT,\n\t`stage`\tINTEGER,\n\t`date`\tTEXT,\n\t`match_api_id`\tINTEGER UNIQUE,\n\t`home_team_api_id`\tINTEGER,\n\t`away_team_api_id`\tINTEGER,\n\t`home_team_goal`\tINTEGER,\n\t`away_team_goal`\tINTEGER,\n\t`home_player_X1`\tINTEGER,\n\t`home_player_X2`\tINTEGER,\n\t`home_player_X3`\tINTEGER,\n\t`home_player_X4`\tINTEGER,\n\t`home_player_X5`\tINTEGER,\n\t`home_player_X6`\tINTEGER,\n\t`home_player_X7`\tINTEGER,\n\t`home_player_X8`\tINTEGER,\n\t`home_player_X9`\tINTEGER,\n\t`home_player_X10`\tINTEGER,\n\t`home_player_X11`\tINTEGER,\n\t`away_player_X1`\tINTEGER,\n\t`away_player_X2`\tINTEGER,\n\t`away_player_X3`\tINTEGER,\n\t`away_player_X4`\tINTEGER,\n\t`away_player_X5`\tINTEGER,\n\t`away_player_X6`\tINTEGER,\n\t`away_player_X7`\tINTEGER,\n\t`away_player_X8`\tINTEGER,\n\t`away_player_X9`\tINTEGER,\n\t`away_player_X10`\tINTEGER,\n\t`away_player_X11`\tINTEGER,\n\t`home_player_Y1`\tINTEGER,\n\t`home_player_Y2`\tINTEGER,\n\t`home_player_Y3`\tINTEGER,\n\t`home_player_Y4`\tINTEGER,\n\t`home_player_Y5`\tINTEGER,\n\t`home_player_Y6`\tINTEGER,\n\t`home_player_Y7`\tINTEGER,\n\t`home_player_Y8`\tINTEGER,\n\t`home_player_Y9`\tINTEGER,\n\t`home_player_Y10`\tINTEGER,\n\t`home_player_Y11`\tINTEGER,\n\t`away_player_Y1`\tINTEGER,\n\t`away_player_Y2`\tINTEGER,\n\t`away_player_Y3`\tINTEGER,\n\t`away_player_Y4`\tINTEGER,\n\t`away_player_Y5`\tINTEGER,\n\t`away_player_Y6`\tINTEGER,\n\t`away_player_Y7`\tINTEGER,\n\t`away_player_Y8`\tINTEGER,\n\t`away_player_Y9`\tINTEGER,\n\t`away_player_Y10`\tINTEGER,\n\t`away_player_Y11`\tINTEGER,\n\t`home_player_1`\tINTEGER,\n\t`home_player_2`\tINTEGER,\n\t`home_player_3`\tINTEGER,\n\t`home_player_4`\tINTEGER,\n\t`home_player_5`\tINTEGER,\n\t`home_player_6`\tINTEGER,\n\t`home_player_7`\tINTEGER,\n\t`home_player_8`\tINTEGER,\n\t`home_player_9`\tINTEGER,\n\t`home_player_10`\tINTEGER,\n\t`home_player_11`\tINTEGER,\n\t`away_player_1`\tINTEGER,\n\t`away_player_2`\tINTEGER,\n\t`away_player_3`\tINTEGER,\n\t`away_player_4`\tINTEGER,\n\t`away_player_5`\tINTEGER,\n\t`away_player_6`\tINTEGER,\n\t`away_player_7`\tINTEGER,\n\t`away_player_8`\tINTEGER,\n\t`away_player_9`\tINTEGER,\n\t`away_player_10`\tINTEGER,\n\t`away_player_11`\tINTEGER,\n\t`goal`\tTEXT,\n\t`shoton`\tTEXT,\n\t`shotoff`\tTEXT,\n\t`foulcommit`\tTEXT,\n\t`card`\tTEXT,\n\t`cross`\tTEXT,\n\t`corner`\tTEXT,\n\t`possession`\tTEXT,\n\t`B365H`\tNUMERIC,\n\t`B365D`\tNUMERIC,\n\t`B365A`\tNUMERIC,\n\t`BWH`\tNUMERIC,\n\t`BWD`\tNUMERIC,\n\t`BWA`\tNUMERIC,\n\t`IWH`\tNUMERIC,\n\t`IWD`\tNUMERIC,\n\t`IWA`\tNUMERIC,\n\t`LBH`\tNUMERIC,\n\t`LBD`\tNUMERIC,\n\t`LBA`\tNUMERIC,\n\t`PSH`\tNUMERIC,\n\t`PSD`\tNUMERIC,\n\t`PSA`\tNUMERIC,\n\t`WHH`\tNUMERIC,\n\t`WHD`\tNUMERIC,\n\t`WHA`\tNUMERIC,\n\t`SJH`\tNUMERIC,\n\t`SJD`\tNUMERIC,\n\t`SJA`\tNUMERIC,\n\t`VCH`\tNUMERIC,\n\t`VCD`\tNUMERIC,\n\t`VCA`\tNUMERIC,\n\t`GBH`\tNUMERIC,\n\t`GBD`\tNUMERIC,\n\t`GBA`\tNUMERIC,\n\t`BSH`\tNUMERIC,\n\t`BSD`\tNUMERIC,\n\t`BSA`\tNUMERIC,\n\tFOREIGN KEY(`country_id`) REFERENCES `country`(`id`),\n\tFOREIGN KEY(`league_id`) REFERENCES `League`(`id`),\n\tFOREIGN KEY(`home_team_api_id`) REFERENCES `Team`(`team_api_id`),\n\tFOREIGN KEY(`away_team_api_id`) REFERENCES `Team`(`team_api_id`),\n\tFOREIGN KEY(`home_player_1`) REFERENCES `Player`(`player_api_id`),\n\tFOREIGN KEY(`home_player_2`) REFERENCES `Player`(`player_api_id`),\n\tFOREIGN KEY(`home_player_3`) REFERENCES `Player`(`player_api_id`),\n\tFOREIGN KEY(`home_player_4`) REFERENCES `Player`(`player_api_id`),\n\tFOREIGN KEY(`home_player_5`) REFERENCES `Player`(`player_api_id`),\n\tFOREIGN KEY(`home_player_6`) REFERENCES `Player`(`player_api_id`),\n\tFOREIGN KEY(`home_player_7`) REFERENCES `Player`(`player_api_id`),\n\tFOREIGN KEY(`home_player_8`) REFERENCES `Player`(`player_api_id`),\n\tFOREIGN KEY(`home_player_9`) REFERENCES `Player`(`player_api_id`),\n\tFOREIGN KEY(`home_player_10`) REFERENCES `Player`(`player_api_id`),\n\tFOREIGN KEY(`home_player_11`) REFERENCES `Player`(`player_api_id`),\n\tFOREIGN KEY(`away_player_1`) REFERENCES `Player`(`player_api_id`),\n\tFOREIGN KEY(`away_player_2`) REFERENCES `Player`(`player_api_id`),\n\tFOREIGN KEY(`away_player_3`) REFERENCES `Player`(`player_api_id`),\n\tFOREIGN KEY(`away_player_4`) REFERENCES `Player`(`player_api_id`),\n\tFOREIGN KEY(`away_player_5`) REFERENCES `Player`(`player_api_id`),\n\tFOREIGN KEY(`away_player_6`) REFERENCES `Player`(`player_api_id`),\n\tFOREIGN KEY(`away_player_7`) REFERENCES `Player`(`player_api_id`),\n\tFOREIGN KEY(`away_player_8`) REFERENCES `Player`(`player_api_id`),\n\tFOREIGN KEY(`away_player_9`) REFERENCES `Player`(`player_api_id`),\n\tFOREIGN KEY(`away_player_10`) REFERENCES `Player`(`player_api_id`),\n\tFOREIGN KEY(`away_player_11`) REFERENCES `Player`(`player_api_id`)\n)",
+      "null_counts": {
+        "id": 0,
+        "country_id": 0,
+        "league_id": 0,
+        "season": 0,
+        "stage": 0,
+        "date": 0,
+        "match_api_id": 0,
+        "home_team_api_id": 0,
+        "away_team_api_id": 0,
+        "home_team_goal": 0,
+        "away_team_goal": 0,
+        "home_player_X1": 1821,
+        "home_player_X2": 1821,
+        "home_player_X3": 1832,
+        "home_player_X4": 1832,
+        "home_player_X5": 1832,
+        "home_player_X6": 1832,
+        "home_player_X7": 1832,
+        "home_player_X8": 1832,
+        "home_player_X9": 1832,
+        "home_player_X10": 1832,
+        "home_player_X11": 1832,
+        "away_player_X1": 1832,
+        "away_player_X2": 1832,
+        "away_player_X3": 1832,
+        "away_player_X4": 1832,
+        "away_player_X5": 1832,
+        "away_player_X6": 1832,
+        "away_player_X7": 1832,
+        "away_player_X8": 1832,
+        "away_player_X9": 1833,
+        "away_player_X10": 1833,
+        "away_player_X11": 1839,
+        "home_player_Y1": 1821,
+        "home_player_Y2": 1821,
+        "home_player_Y3": 1832,
+        "home_player_Y4": 1832,
+        "home_player_Y5": 1832,
+        "home_player_Y6": 1832,
+        "home_player_Y7": 1832,
+        "home_player_Y8": 1832,
+        "home_player_Y9": 1832,
+        "home_player_Y10": 1832,
+        "home_player_Y11": 1832,
+        "away_player_Y1": 1832,
+        "away_player_Y2": 1832,
+        "away_player_Y3": 1832,
+        "away_player_Y4": 1832,
+        "away_player_Y5": 1832,
+        "away_player_Y6": 1832,
+        "away_player_Y7": 1832,
+        "away_player_Y8": 1832,
+        "away_player_Y9": 1833,
+        "away_player_Y10": 1833,
+        "away_player_Y11": 1839,
+        "home_player_1": 1224,
+        "home_player_2": 1315,
+        "home_player_3": 1281,
+        "home_player_4": 1323,
+        "home_player_5": 1316,
+        "home_player_6": 1325,
+        "home_player_7": 1227,
+        "home_player_8": 1309,
+        "home_player_9": 1273,
+        "home_player_10": 1436,
+        "home_player_11": 1555,
+        "away_player_1": 1234,
+        "away_player_2": 1278,
+        "away_player_3": 1293,
+        "away_player_4": 1321,
+        "away_player_5": 1335,
+        "away_player_6": 1313,
+        "away_player_7": 1235,
+        "away_player_8": 1341,
+        "away_player_9": 1328,
+        "away_player_10": 1441,
+        "away_player_11": 1554,
+        "goal": 11762,
+        "shoton": 11762,
+        "shotoff": 11762,
+        "foulcommit": 11762,
+        "card": 11762,
+        "cross": 11762,
+        "corner": 11762,
+        "possession": 11762,
+        "B365H": 3387,
+        "B365D": 3387,
+        "B365A": 3387,
+        "BWH": 3404,
+        "BWD": 3404,
+        "BWA": 3404,
+        "IWH": 3459,
+        "IWD": 3459,
+        "IWA": 3459,
+        "LBH": 3423,
+        "LBD": 3423,
+        "LBA": 3423,
+        "PSH": 14811,
+        "PSD": 14811,
+        "PSA": 14811,
+        "WHH": 3408,
+        "WHD": 3408,
+        "WHA": 3408,
+        "SJH": 8882,
+        "SJD": 8882,
+        "SJA": 8882,
+        "VCH": 3411,
+        "VCD": 3411,
+        "VCA": 3411,
+        "GBH": 11817,
+        "GBD": 11817,
+        "GBA": 11817,
+        "BSH": 11818,
+        "BSD": 11818,
+        "BSA": 11818
+      },
+      "nonnull_string_blanks": {
+        "id": 0,
+        "country_id": 0,
+        "league_id": 0,
+        "season": 0,
+        "stage": 0,
+        "date": 0,
+        "match_api_id": 0,
+        "home_team_api_id": 0,
+        "away_team_api_id": 0,
+        "home_team_goal": 0,
+        "away_team_goal": 0,
+        "home_player_X1": 0,
+        "home_player_X2": 0,
+        "home_player_X3": 0,
+        "home_player_X4": 0,
+        "home_player_X5": 0,
+        "home_player_X6": 0,
+        "home_player_X7": 0,
+        "home_player_X8": 0,
+        "home_player_X9": 0,
+        "home_player_X10": 0,
+        "home_player_X11": 0,
+        "away_player_X1": 0,
+        "away_player_X2": 0,
+        "away_player_X3": 0,
+        "away_player_X4": 0,
+        "away_player_X5": 0,
+        "away_player_X6": 0,
+        "away_player_X7": 0,
+        "away_player_X8": 0,
+        "away_player_X9": 0,
+        "away_player_X10": 0,
+        "away_player_X11": 0,
+        "home_player_Y1": 0,
+        "home_player_Y2": 0,
+        "home_player_Y3": 0,
+        "home_player_Y4": 0,
+        "home_player_Y5": 0,
+        "home_player_Y6": 0,
+        "home_player_Y7": 0,
+        "home_player_Y8": 0,
+        "home_player_Y9": 0,
+        "home_player_Y10": 0,
+        "home_player_Y11": 0,
+        "away_player_Y1": 0,
+        "away_player_Y2": 0,
+        "away_player_Y3": 0,
+        "away_player_Y4": 0,
+        "away_player_Y5": 0,
+        "away_player_Y6": 0,
+        "away_player_Y7": 0,
+        "away_player_Y8": 0,
+        "away_player_Y9": 0,
+        "away_player_Y10": 0,
+        "away_player_Y11": 0,
+        "home_player_1": 0,
+        "home_player_2": 0,
+        "home_player_3": 0,
+        "home_player_4": 0,
+        "home_player_5": 0,
+        "home_player_6": 0,
+        "home_player_7": 0,
+        "home_player_8": 0,
+        "home_player_9": 0,
+        "home_player_10": 0,
+        "home_player_11": 0,
+        "away_player_1": 0,
+        "away_player_2": 0,
+        "away_player_3": 0,
+        "away_player_4": 0,
+        "away_player_5": 0,
+        "away_player_6": 0,
+        "away_player_7": 0,
+        "away_player_8": 0,
+        "away_player_9": 0,
+        "away_player_10": 0,
+        "away_player_11": 0,
+        "goal": 0,
+        "shoton": 0,
+        "shotoff": 0,
+        "foulcommit": 0,
+        "card": 0,
+        "cross": 0,
+        "corner": 0,
+        "possession": 0,
+        "B365H": 0,
+        "B365D": 0,
+        "B365A": 0,
+        "BWH": 0,
+        "BWD": 0,
+        "BWA": 0,
+        "IWH": 0,
+        "IWD": 0,
+        "IWA": 0,
+        "LBH": 0,
+        "LBD": 0,
+        "LBA": 0,
+        "PSH": 0,
+        "PSD": 0,
+        "PSA": 0,
+        "WHH": 0,
+        "WHD": 0,
+        "WHA": 0,
+        "SJH": 0,
+        "SJD": 0,
+        "SJA": 0,
+        "VCH": 0,
+        "VCD": 0,
+        "VCA": 0,
+        "GBH": 0,
+        "GBD": 0,
+        "GBA": 0,
+        "BSH": 0,
+        "BSD": 0,
+        "BSA": 0
+      }
+    },
+    "Player": {
+      "row_count": 11060,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "id",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "player_api_id",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "player_name",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "player_fifa_api_id",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 4,
+          "name": "birthday",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 5,
+          "name": "height",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 6,
+          "name": "weight",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "foreign_keys": [],
+      "ddl": "CREATE TABLE `Player` (\n\t`id`\tINTEGER PRIMARY KEY AUTOINCREMENT,\n\t`player_api_id`\tINTEGER UNIQUE,\n\t`player_name`\tTEXT,\n\t`player_fifa_api_id`\tINTEGER UNIQUE,\n\t`birthday`\tTEXT,\n\t`height`\tINTEGER,\n\t`weight`\tINTEGER\n)",
+      "null_counts": {
+        "id": 0,
+        "player_api_id": 0,
+        "player_name": 0,
+        "player_fifa_api_id": 0,
+        "birthday": 0,
+        "height": 0,
+        "weight": 0
+      },
+      "nonnull_string_blanks": {
+        "id": 0,
+        "player_api_id": 0,
+        "player_name": 0,
+        "player_fifa_api_id": 0,
+        "birthday": 0,
+        "height": 0,
+        "weight": 0
+      }
+    },
+    "Player_Attributes": {
+      "row_count": 183978,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "id",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "player_fifa_api_id",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "player_api_id",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "date",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 4,
+          "name": "overall_rating",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 5,
+          "name": "potential",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 6,
+          "name": "preferred_foot",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 7,
+          "name": "attacking_work_rate",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 8,
+          "name": "defensive_work_rate",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 9,
+          "name": "crossing",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 10,
+          "name": "finishing",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 11,
+          "name": "heading_accuracy",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 12,
+          "name": "short_passing",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 13,
+          "name": "volleys",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 14,
+          "name": "dribbling",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 15,
+          "name": "curve",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 16,
+          "name": "free_kick_accuracy",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 17,
+          "name": "long_passing",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 18,
+          "name": "ball_control",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 19,
+          "name": "acceleration",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 20,
+          "name": "sprint_speed",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 21,
+          "name": "agility",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 22,
+          "name": "reactions",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 23,
+          "name": "balance",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 24,
+          "name": "shot_power",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 25,
+          "name": "jumping",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 26,
+          "name": "stamina",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 27,
+          "name": "strength",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 28,
+          "name": "long_shots",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 29,
+          "name": "aggression",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 30,
+          "name": "interceptions",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 31,
+          "name": "positioning",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 32,
+          "name": "vision",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 33,
+          "name": "penalties",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 34,
+          "name": "marking",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 35,
+          "name": "standing_tackle",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 36,
+          "name": "sliding_tackle",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 37,
+          "name": "gk_diving",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 38,
+          "name": "gk_handling",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 39,
+          "name": "gk_kicking",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 40,
+          "name": "gk_positioning",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 41,
+          "name": "gk_reflexes",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "foreign_keys": [
+        {
+          "id": 0,
+          "seq": 0,
+          "table": "Player",
+          "from": "player_api_id",
+          "to": "player_api_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION",
+          "match": "NONE"
+        },
+        {
+          "id": 1,
+          "seq": 0,
+          "table": "Player",
+          "from": "player_fifa_api_id",
+          "to": "player_fifa_api_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION",
+          "match": "NONE"
+        }
+      ],
+      "ddl": "CREATE TABLE \"Player_Attributes\" (\n\t`id`\tINTEGER PRIMARY KEY AUTOINCREMENT,\n\t`player_fifa_api_id`\tINTEGER,\n\t`player_api_id`\tINTEGER,\n\t`date`\tTEXT,\n\t`overall_rating`\tINTEGER,\n\t`potential`\tINTEGER,\n\t`preferred_foot`\tTEXT,\n\t`attacking_work_rate`\tTEXT,\n\t`defensive_work_rate`\tTEXT,\n\t`crossing`\tINTEGER,\n\t`finishing`\tINTEGER,\n\t`heading_accuracy`\tINTEGER,\n\t`short_passing`\tINTEGER,\n\t`volleys`\tINTEGER,\n\t`dribbling`\tINTEGER,\n\t`curve`\tINTEGER,\n\t`free_kick_accuracy`\tINTEGER,\n\t`long_passing`\tINTEGER,\n\t`ball_control`\tINTEGER,\n\t`acceleration`\tINTEGER,\n\t`sprint_speed`\tINTEGER,\n\t`agility`\tINTEGER,\n\t`reactions`\tINTEGER,\n\t`balance`\tINTEGER,\n\t`shot_power`\tINTEGER,\n\t`jumping`\tINTEGER,\n\t`stamina`\tINTEGER,\n\t`strength`\tINTEGER,\n\t`long_shots`\tINTEGER,\n\t`aggression`\tINTEGER,\n\t`interceptions`\tINTEGER,\n\t`positioning`\tINTEGER,\n\t`vision`\tINTEGER,\n\t`penalties`\tINTEGER,\n\t`marking`\tINTEGER,\n\t`standing_tackle`\tINTEGER,\n\t`sliding_tackle`\tINTEGER,\n\t`gk_diving`\tINTEGER,\n\t`gk_handling`\tINTEGER,\n\t`gk_kicking`\tINTEGER,\n\t`gk_positioning`\tINTEGER,\n\t`gk_reflexes`\tINTEGER,\n\tFOREIGN KEY(`player_fifa_api_id`) REFERENCES `Player`(`player_fifa_api_id`),\n\tFOREIGN KEY(`player_api_id`) REFERENCES `Player`(`player_api_id`)\n)",
+      "null_counts": {
+        "id": 0,
+        "player_fifa_api_id": 0,
+        "player_api_id": 0,
+        "date": 0,
+        "overall_rating": 836,
+        "potential": 836,
+        "preferred_foot": 836,
+        "attacking_work_rate": 3230,
+        "defensive_work_rate": 836,
+        "crossing": 836,
+        "finishing": 836,
+        "heading_accuracy": 836,
+        "short_passing": 836,
+        "volleys": 2713,
+        "dribbling": 836,
+        "curve": 2713,
+        "free_kick_accuracy": 836,
+        "long_passing": 836,
+        "ball_control": 836,
+        "acceleration": 836,
+        "sprint_speed": 836,
+        "agility": 2713,
+        "reactions": 836,
+        "balance": 2713,
+        "shot_power": 836,
+        "jumping": 2713,
+        "stamina": 836,
+        "strength": 836,
+        "long_shots": 836,
+        "aggression": 836,
+        "interceptions": 836,
+        "positioning": 836,
+        "vision": 2713,
+        "penalties": 836,
+        "marking": 836,
+        "standing_tackle": 836,
+        "sliding_tackle": 2713,
+        "gk_diving": 836,
+        "gk_handling": 836,
+        "gk_kicking": 836,
+        "gk_positioning": 836,
+        "gk_reflexes": 836
+      },
+      "nonnull_string_blanks": {
+        "id": 0,
+        "player_fifa_api_id": 0,
+        "player_api_id": 0,
+        "date": 0,
+        "overall_rating": 0,
+        "potential": 0,
+        "preferred_foot": 0,
+        "attacking_work_rate": 0,
+        "defensive_work_rate": 0,
+        "crossing": 0,
+        "finishing": 0,
+        "heading_accuracy": 0,
+        "short_passing": 0,
+        "volleys": 0,
+        "dribbling": 0,
+        "curve": 0,
+        "free_kick_accuracy": 0,
+        "long_passing": 0,
+        "ball_control": 0,
+        "acceleration": 0,
+        "sprint_speed": 0,
+        "agility": 0,
+        "reactions": 0,
+        "balance": 0,
+        "shot_power": 0,
+        "jumping": 0,
+        "stamina": 0,
+        "strength": 0,
+        "long_shots": 0,
+        "aggression": 0,
+        "interceptions": 0,
+        "positioning": 0,
+        "vision": 0,
+        "penalties": 0,
+        "marking": 0,
+        "standing_tackle": 0,
+        "sliding_tackle": 0,
+        "gk_diving": 0,
+        "gk_handling": 0,
+        "gk_kicking": 0,
+        "gk_positioning": 0,
+        "gk_reflexes": 0
+      }
+    },
+    "Team": {
+      "row_count": 299,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "id",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "team_api_id",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "team_fifa_api_id",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "team_long_name",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 4,
+          "name": "team_short_name",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "foreign_keys": [],
+      "ddl": "CREATE TABLE \"Team\" (\n\t`id`\tINTEGER PRIMARY KEY AUTOINCREMENT,\n\t`team_api_id`\tINTEGER UNIQUE,\n\t`team_fifa_api_id`\tINTEGER,\n\t`team_long_name`\tTEXT,\n\t`team_short_name`\tTEXT\n)",
+      "null_counts": {
+        "id": 0,
+        "team_api_id": 0,
+        "team_fifa_api_id": 11,
+        "team_long_name": 0,
+        "team_short_name": 0
+      },
+      "nonnull_string_blanks": {
+        "id": 0,
+        "team_api_id": 0,
+        "team_fifa_api_id": 0,
+        "team_long_name": 0,
+        "team_short_name": 0
+      }
+    },
+    "Team_Attributes": {
+      "row_count": 1458,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "id",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 1
+        },
+        {
+          "cid": 1,
+          "name": "team_fifa_api_id",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 2,
+          "name": "team_api_id",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 3,
+          "name": "date",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 4,
+          "name": "buildUpPlaySpeed",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 5,
+          "name": "buildUpPlaySpeedClass",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 6,
+          "name": "buildUpPlayDribbling",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 7,
+          "name": "buildUpPlayDribblingClass",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 8,
+          "name": "buildUpPlayPassing",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 9,
+          "name": "buildUpPlayPassingClass",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 10,
+          "name": "buildUpPlayPositioningClass",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 11,
+          "name": "chanceCreationPassing",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 12,
+          "name": "chanceCreationPassingClass",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 13,
+          "name": "chanceCreationCrossing",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 14,
+          "name": "chanceCreationCrossingClass",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 15,
+          "name": "chanceCreationShooting",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 16,
+          "name": "chanceCreationShootingClass",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 17,
+          "name": "chanceCreationPositioningClass",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 18,
+          "name": "defencePressure",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 19,
+          "name": "defencePressureClass",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 20,
+          "name": "defenceAggression",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 21,
+          "name": "defenceAggressionClass",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 22,
+          "name": "defenceTeamWidth",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 23,
+          "name": "defenceTeamWidthClass",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        },
+        {
+          "cid": 24,
+          "name": "defenceDefenderLineClass",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0
+        }
+      ],
+      "foreign_keys": [
+        {
+          "id": 0,
+          "seq": 0,
+          "table": "Team",
+          "from": "team_api_id",
+          "to": "team_api_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION",
+          "match": "NONE"
+        },
+        {
+          "id": 1,
+          "seq": 0,
+          "table": "Team",
+          "from": "team_fifa_api_id",
+          "to": "team_fifa_api_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION",
+          "match": "NONE"
+        }
+      ],
+      "ddl": "CREATE TABLE `Team_Attributes` (\n\t`id`\tINTEGER PRIMARY KEY AUTOINCREMENT,\n\t`team_fifa_api_id`\tINTEGER,\n\t`team_api_id`\tINTEGER,\n\t`date`\tTEXT,\n\t`buildUpPlaySpeed`\tINTEGER,\n\t`buildUpPlaySpeedClass`\tTEXT,\n\t`buildUpPlayDribbling`\tINTEGER,\n\t`buildUpPlayDribblingClass`\tTEXT,\n\t`buildUpPlayPassing`\tINTEGER,\n\t`buildUpPlayPassingClass`\tTEXT,\n\t`buildUpPlayPositioningClass`\tTEXT,\n\t`chanceCreationPassing`\tINTEGER,\n\t`chanceCreationPassingClass`\tTEXT,\n\t`chanceCreationCrossing`\tINTEGER,\n\t`chanceCreationCrossingClass`\tTEXT,\n\t`chanceCreationShooting`\tINTEGER,\n\t`chanceCreationShootingClass`\tTEXT,\n\t`chanceCreationPositioningClass`\tTEXT,\n\t`defencePressure`\tINTEGER,\n\t`defencePressureClass`\tTEXT,\n\t`defenceAggression`\tINTEGER,\n\t`defenceAggressionClass`\tTEXT,\n\t`defenceTeamWidth`\tINTEGER,\n\t`defenceTeamWidthClass`\tTEXT,\n\t`defenceDefenderLineClass`\tTEXT,\n\tFOREIGN KEY(`team_fifa_api_id`) REFERENCES `Team`(`team_fifa_api_id`),\n\tFOREIGN KEY(`team_api_id`) REFERENCES `Team`(`team_api_id`)\n)",
+      "null_counts": {
+        "id": 0,
+        "team_fifa_api_id": 0,
+        "team_api_id": 0,
+        "date": 0,
+        "buildUpPlaySpeed": 0,
+        "buildUpPlaySpeedClass": 0,
+        "buildUpPlayDribbling": 969,
+        "buildUpPlayDribblingClass": 0,
+        "buildUpPlayPassing": 0,
+        "buildUpPlayPassingClass": 0,
+        "buildUpPlayPositioningClass": 0,
+        "chanceCreationPassing": 0,
+        "chanceCreationPassingClass": 0,
+        "chanceCreationCrossing": 0,
+        "chanceCreationCrossingClass": 0,
+        "chanceCreationShooting": 0,
+        "chanceCreationShootingClass": 0,
+        "chanceCreationPositioningClass": 0,
+        "defencePressure": 0,
+        "defencePressureClass": 0,
+        "defenceAggression": 0,
+        "defenceAggressionClass": 0,
+        "defenceTeamWidth": 0,
+        "defenceTeamWidthClass": 0,
+        "defenceDefenderLineClass": 0
+      },
+      "nonnull_string_blanks": {
+        "id": 0,
+        "team_fifa_api_id": 0,
+        "team_api_id": 0,
+        "date": 0,
+        "buildUpPlaySpeed": 0,
+        "buildUpPlaySpeedClass": 0,
+        "buildUpPlayDribbling": 0,
+        "buildUpPlayDribblingClass": 0,
+        "buildUpPlayPassing": 0,
+        "buildUpPlayPassingClass": 0,
+        "buildUpPlayPositioningClass": 0,
+        "chanceCreationPassing": 0,
+        "chanceCreationPassingClass": 0,
+        "chanceCreationCrossing": 0,
+        "chanceCreationCrossingClass": 0,
+        "chanceCreationShooting": 0,
+        "chanceCreationShootingClass": 0,
+        "chanceCreationPositioningClass": 0,
+        "defencePressure": 0,
+        "defencePressureClass": 0,
+        "defenceAggression": 0,
+        "defenceAggressionClass": 0,
+        "defenceTeamWidth": 0,
+        "defenceTeamWidthClass": 0,
+        "defenceDefenderLineClass": 0
+      }
+    }
+  },
+  "countries": [
+    {
+      "id": 1,
+      "name": "Belgium"
+    },
+    {
+      "id": 1729,
+      "name": "England"
+    },
+    {
+      "id": 4769,
+      "name": "France"
+    },
+    {
+      "id": 7809,
+      "name": "Germany"
+    },
+    {
+      "id": 10257,
+      "name": "Italy"
+    },
+    {
+      "id": 13274,
+      "name": "Netherlands"
+    },
+    {
+      "id": 15722,
+      "name": "Poland"
+    },
+    {
+      "id": 17642,
+      "name": "Portugal"
+    },
+    {
+      "id": 19694,
+      "name": "Scotland"
+    },
+    {
+      "id": 21518,
+      "name": "Spain"
+    },
+    {
+      "id": 24558,
+      "name": "Switzerland"
+    }
+  ],
+  "leagues": [
+    {
+      "id": 1,
+      "country_id": 1,
+      "name": "Belgium Jupiler League"
+    },
+    {
+      "id": 1729,
+      "country_id": 1729,
+      "name": "England Premier League"
+    },
+    {
+      "id": 4769,
+      "country_id": 4769,
+      "name": "France Ligue 1"
+    },
+    {
+      "id": 7809,
+      "country_id": 7809,
+      "name": "Germany 1. Bundesliga"
+    },
+    {
+      "id": 10257,
+      "country_id": 10257,
+      "name": "Italy Serie A"
+    },
+    {
+      "id": 13274,
+      "country_id": 13274,
+      "name": "Netherlands Eredivisie"
+    },
+    {
+      "id": 15722,
+      "country_id": 15722,
+      "name": "Poland Ekstraklasa"
+    },
+    {
+      "id": 17642,
+      "country_id": 17642,
+      "name": "Portugal Liga ZON Sagres"
+    },
+    {
+      "id": 19694,
+      "country_id": 19694,
+      "name": "Scotland Premier League"
+    },
+    {
+      "id": 21518,
+      "country_id": 21518,
+      "name": "Spain LIGA BBVA"
+    },
+    {
+      "id": 24558,
+      "country_id": 24558,
+      "name": "Switzerland Super League"
+    }
+  ],
+  "overall_match_coverage": [
+    {
+      "rows": 25979,
+      "distinct_match_api_ids": 25979,
+      "first_date": "2008-07-18 00:00:00",
+      "last_date": "2016-05-25 00:00:00",
+      "seasons": 8,
+      "leagues": 11
+    }
+  ],
+  "league_season_coverage": [
+    {
+      "league": "Belgium Jupiler League",
+      "league_id": 1,
+      "season": "2008/2009",
+      "matches": 306,
+      "first_date": "2008-08-16",
+      "last_date": "2009-05-16",
+      "min_stage": 1,
+      "max_stage": 34
+    },
+    {
+      "league": "Belgium Jupiler League",
+      "league_id": 1,
+      "season": "2009/2010",
+      "matches": 210,
+      "first_date": "2009-07-31",
+      "last_date": "2010-03-21",
+      "min_stage": 1,
+      "max_stage": 30
+    },
+    {
+      "league": "Belgium Jupiler League",
+      "league_id": 1,
+      "season": "2010/2011",
+      "matches": 240,
+      "first_date": "2010-07-30",
+      "last_date": "2011-03-23",
+      "min_stage": 1,
+      "max_stage": 30
+    },
+    {
+      "league": "Belgium Jupiler League",
+      "league_id": 1,
+      "season": "2011/2012",
+      "matches": 240,
+      "first_date": "2011-07-29",
+      "last_date": "2012-03-21",
+      "min_stage": 1,
+      "max_stage": 30
+    },
+    {
+      "league": "Belgium Jupiler League",
+      "league_id": 1,
+      "season": "2012/2013",
+      "matches": 240,
+      "first_date": "2012-07-28",
+      "last_date": "2013-03-16",
+      "min_stage": 1,
+      "max_stage": 30
+    },
+    {
+      "league": "Belgium Jupiler League",
+      "league_id": 1,
+      "season": "2013/2014",
+      "matches": 12,
+      "first_date": "2014-03-29",
+      "last_date": "2014-05-03",
+      "min_stage": 1,
+      "max_stage": 6
+    },
+    {
+      "league": "Belgium Jupiler League",
+      "league_id": 1,
+      "season": "2014/2015",
+      "matches": 240,
+      "first_date": "2014-07-25",
+      "last_date": "2015-03-15",
+      "min_stage": 1,
+      "max_stage": 30
+    },
+    {
+      "league": "Belgium Jupiler League",
+      "league_id": 1,
+      "season": "2015/2016",
+      "matches": 240,
+      "first_date": "2015-07-24",
+      "last_date": "2016-03-13",
+      "min_stage": 1,
+      "max_stage": 30
+    },
+    {
+      "league": "England Premier League",
+      "league_id": 1729,
+      "season": "2008/2009",
+      "matches": 380,
+      "first_date": "2008-08-16",
+      "last_date": "2009-05-24",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "England Premier League",
+      "league_id": 1729,
+      "season": "2009/2010",
+      "matches": 380,
+      "first_date": "2009-08-15",
+      "last_date": "2010-05-09",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "England Premier League",
+      "league_id": 1729,
+      "season": "2010/2011",
+      "matches": 380,
+      "first_date": "2010-08-14",
+      "last_date": "2011-05-22",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "England Premier League",
+      "league_id": 1729,
+      "season": "2011/2012",
+      "matches": 380,
+      "first_date": "2011-08-13",
+      "last_date": "2012-05-13",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "England Premier League",
+      "league_id": 1729,
+      "season": "2012/2013",
+      "matches": 380,
+      "first_date": "2012-08-18",
+      "last_date": "2013-05-19",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "England Premier League",
+      "league_id": 1729,
+      "season": "2013/2014",
+      "matches": 380,
+      "first_date": "2013-08-17",
+      "last_date": "2014-05-11",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "England Premier League",
+      "league_id": 1729,
+      "season": "2014/2015",
+      "matches": 380,
+      "first_date": "2014-08-16",
+      "last_date": "2015-05-24",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "England Premier League",
+      "league_id": 1729,
+      "season": "2015/2016",
+      "matches": 380,
+      "first_date": "2015-08-08",
+      "last_date": "2016-05-17",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "France Ligue 1",
+      "league_id": 4769,
+      "season": "2008/2009",
+      "matches": 380,
+      "first_date": "2008-08-09",
+      "last_date": "2009-05-30",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "France Ligue 1",
+      "league_id": 4769,
+      "season": "2009/2010",
+      "matches": 380,
+      "first_date": "2009-08-08",
+      "last_date": "2010-05-15",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "France Ligue 1",
+      "league_id": 4769,
+      "season": "2010/2011",
+      "matches": 380,
+      "first_date": "2010-08-07",
+      "last_date": "2011-05-29",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "France Ligue 1",
+      "league_id": 4769,
+      "season": "2011/2012",
+      "matches": 380,
+      "first_date": "2011-08-06",
+      "last_date": "2012-05-20",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "France Ligue 1",
+      "league_id": 4769,
+      "season": "2012/2013",
+      "matches": 380,
+      "first_date": "2012-08-10",
+      "last_date": "2013-05-26",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "France Ligue 1",
+      "league_id": 4769,
+      "season": "2013/2014",
+      "matches": 380,
+      "first_date": "2013-08-09",
+      "last_date": "2014-05-17",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "France Ligue 1",
+      "league_id": 4769,
+      "season": "2014/2015",
+      "matches": 380,
+      "first_date": "2014-08-08",
+      "last_date": "2015-05-23",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "France Ligue 1",
+      "league_id": 4769,
+      "season": "2015/2016",
+      "matches": 380,
+      "first_date": "2015-08-07",
+      "last_date": "2016-05-14",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "Germany 1. Bundesliga",
+      "league_id": 7809,
+      "season": "2008/2009",
+      "matches": 306,
+      "first_date": "2008-08-15",
+      "last_date": "2009-05-23",
+      "min_stage": 1,
+      "max_stage": 34
+    },
+    {
+      "league": "Germany 1. Bundesliga",
+      "league_id": 7809,
+      "season": "2009/2010",
+      "matches": 306,
+      "first_date": "2009-08-07",
+      "last_date": "2010-05-08",
+      "min_stage": 1,
+      "max_stage": 34
+    },
+    {
+      "league": "Germany 1. Bundesliga",
+      "league_id": 7809,
+      "season": "2010/2011",
+      "matches": 306,
+      "first_date": "2010-08-20",
+      "last_date": "2011-05-14",
+      "min_stage": 1,
+      "max_stage": 34
+    },
+    {
+      "league": "Germany 1. Bundesliga",
+      "league_id": 7809,
+      "season": "2011/2012",
+      "matches": 306,
+      "first_date": "2011-08-05",
+      "last_date": "2012-05-05",
+      "min_stage": 1,
+      "max_stage": 34
+    },
+    {
+      "league": "Germany 1. Bundesliga",
+      "league_id": 7809,
+      "season": "2012/2013",
+      "matches": 306,
+      "first_date": "2012-08-24",
+      "last_date": "2013-05-18",
+      "min_stage": 1,
+      "max_stage": 34
+    },
+    {
+      "league": "Germany 1. Bundesliga",
+      "league_id": 7809,
+      "season": "2013/2014",
+      "matches": 306,
+      "first_date": "2013-08-09",
+      "last_date": "2014-05-10",
+      "min_stage": 1,
+      "max_stage": 34
+    },
+    {
+      "league": "Germany 1. Bundesliga",
+      "league_id": 7809,
+      "season": "2014/2015",
+      "matches": 306,
+      "first_date": "2014-08-22",
+      "last_date": "2015-05-23",
+      "min_stage": 1,
+      "max_stage": 34
+    },
+    {
+      "league": "Germany 1. Bundesliga",
+      "league_id": 7809,
+      "season": "2015/2016",
+      "matches": 306,
+      "first_date": "2015-08-14",
+      "last_date": "2016-05-14",
+      "min_stage": 1,
+      "max_stage": 34
+    },
+    {
+      "league": "Italy Serie A",
+      "league_id": 10257,
+      "season": "2008/2009",
+      "matches": 380,
+      "first_date": "2008-08-30",
+      "last_date": "2009-05-31",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "Italy Serie A",
+      "league_id": 10257,
+      "season": "2009/2010",
+      "matches": 380,
+      "first_date": "2009-08-22",
+      "last_date": "2010-05-16",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "Italy Serie A",
+      "league_id": 10257,
+      "season": "2010/2011",
+      "matches": 380,
+      "first_date": "2010-08-28",
+      "last_date": "2011-05-22",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "Italy Serie A",
+      "league_id": 10257,
+      "season": "2011/2012",
+      "matches": 358,
+      "first_date": "2011-09-09",
+      "last_date": "2012-05-13",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "Italy Serie A",
+      "league_id": 10257,
+      "season": "2012/2013",
+      "matches": 380,
+      "first_date": "2012-08-25",
+      "last_date": "2013-05-19",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "Italy Serie A",
+      "league_id": 10257,
+      "season": "2013/2014",
+      "matches": 380,
+      "first_date": "2013-08-24",
+      "last_date": "2014-05-18",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "Italy Serie A",
+      "league_id": 10257,
+      "season": "2014/2015",
+      "matches": 379,
+      "first_date": "2014-08-30",
+      "last_date": "2015-05-31",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "Italy Serie A",
+      "league_id": 10257,
+      "season": "2015/2016",
+      "matches": 380,
+      "first_date": "2015-08-22",
+      "last_date": "2016-05-15",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "Netherlands Eredivisie",
+      "league_id": 13274,
+      "season": "2008/2009",
+      "matches": 306,
+      "first_date": "2008-08-29",
+      "last_date": "2009-05-10",
+      "min_stage": 1,
+      "max_stage": 34
+    },
+    {
+      "league": "Netherlands Eredivisie",
+      "league_id": 13274,
+      "season": "2009/2010",
+      "matches": 306,
+      "first_date": "2009-07-31",
+      "last_date": "2010-05-02",
+      "min_stage": 1,
+      "max_stage": 34
+    },
+    {
+      "league": "Netherlands Eredivisie",
+      "league_id": 13274,
+      "season": "2010/2011",
+      "matches": 306,
+      "first_date": "2010-08-06",
+      "last_date": "2011-05-15",
+      "min_stage": 1,
+      "max_stage": 34
+    },
+    {
+      "league": "Netherlands Eredivisie",
+      "league_id": 13274,
+      "season": "2011/2012",
+      "matches": 306,
+      "first_date": "2011-08-05",
+      "last_date": "2012-05-06",
+      "min_stage": 1,
+      "max_stage": 34
+    },
+    {
+      "league": "Netherlands Eredivisie",
+      "league_id": 13274,
+      "season": "2012/2013",
+      "matches": 306,
+      "first_date": "2012-08-10",
+      "last_date": "2013-05-12",
+      "min_stage": 1,
+      "max_stage": 34
+    },
+    {
+      "league": "Netherlands Eredivisie",
+      "league_id": 13274,
+      "season": "2013/2014",
+      "matches": 306,
+      "first_date": "2013-08-02",
+      "last_date": "2014-05-03",
+      "min_stage": 1,
+      "max_stage": 34
+    },
+    {
+      "league": "Netherlands Eredivisie",
+      "league_id": 13274,
+      "season": "2014/2015",
+      "matches": 306,
+      "first_date": "2014-08-08",
+      "last_date": "2015-05-17",
+      "min_stage": 1,
+      "max_stage": 34
+    },
+    {
+      "league": "Netherlands Eredivisie",
+      "league_id": 13274,
+      "season": "2015/2016",
+      "matches": 306,
+      "first_date": "2015-08-08",
+      "last_date": "2016-05-08",
+      "min_stage": 1,
+      "max_stage": 34
+    },
+    {
+      "league": "Poland Ekstraklasa",
+      "league_id": 15722,
+      "season": "2008/2009",
+      "matches": 240,
+      "first_date": "2008-08-08",
+      "last_date": "2009-05-30",
+      "min_stage": 1,
+      "max_stage": 30
+    },
+    {
+      "league": "Poland Ekstraklasa",
+      "league_id": 15722,
+      "season": "2009/2010",
+      "matches": 240,
+      "first_date": "2009-07-31",
+      "last_date": "2010-05-15",
+      "min_stage": 1,
+      "max_stage": 30
+    },
+    {
+      "league": "Poland Ekstraklasa",
+      "league_id": 15722,
+      "season": "2010/2011",
+      "matches": 240,
+      "first_date": "2010-08-06",
+      "last_date": "2011-05-29",
+      "min_stage": 1,
+      "max_stage": 30
+    },
+    {
+      "league": "Poland Ekstraklasa",
+      "league_id": 15722,
+      "season": "2011/2012",
+      "matches": 240,
+      "first_date": "2011-07-29",
+      "last_date": "2012-05-06",
+      "min_stage": 1,
+      "max_stage": 30
+    },
+    {
+      "league": "Poland Ekstraklasa",
+      "league_id": 15722,
+      "season": "2012/2013",
+      "matches": 240,
+      "first_date": "2012-08-17",
+      "last_date": "2013-06-02",
+      "min_stage": 1,
+      "max_stage": 30
+    },
+    {
+      "league": "Poland Ekstraklasa",
+      "league_id": 15722,
+      "season": "2013/2014",
+      "matches": 240,
+      "first_date": "2013-07-19",
+      "last_date": "2014-04-12",
+      "min_stage": 1,
+      "max_stage": 30
+    },
+    {
+      "league": "Poland Ekstraklasa",
+      "league_id": 15722,
+      "season": "2014/2015",
+      "matches": 240,
+      "first_date": "2014-07-18",
+      "last_date": "2015-04-29",
+      "min_stage": 1,
+      "max_stage": 30
+    },
+    {
+      "league": "Poland Ekstraklasa",
+      "league_id": 15722,
+      "season": "2015/2016",
+      "matches": 240,
+      "first_date": "2015-07-17",
+      "last_date": "2016-04-09",
+      "min_stage": 1,
+      "max_stage": 30
+    },
+    {
+      "league": "Portugal Liga ZON Sagres",
+      "league_id": 17642,
+      "season": "2008/2009",
+      "matches": 240,
+      "first_date": "2008-08-22",
+      "last_date": "2009-05-24",
+      "min_stage": 1,
+      "max_stage": 30
+    },
+    {
+      "league": "Portugal Liga ZON Sagres",
+      "league_id": 17642,
+      "season": "2009/2010",
+      "matches": 240,
+      "first_date": "2009-08-14",
+      "last_date": "2010-05-09",
+      "min_stage": 1,
+      "max_stage": 30
+    },
+    {
+      "league": "Portugal Liga ZON Sagres",
+      "league_id": 17642,
+      "season": "2010/2011",
+      "matches": 240,
+      "first_date": "2010-08-13",
+      "last_date": "2011-05-14",
+      "min_stage": 1,
+      "max_stage": 30
+    },
+    {
+      "league": "Portugal Liga ZON Sagres",
+      "league_id": 17642,
+      "season": "2011/2012",
+      "matches": 240,
+      "first_date": "2011-08-12",
+      "last_date": "2012-05-12",
+      "min_stage": 1,
+      "max_stage": 30
+    },
+    {
+      "league": "Portugal Liga ZON Sagres",
+      "league_id": 17642,
+      "season": "2012/2013",
+      "matches": 240,
+      "first_date": "2012-08-17",
+      "last_date": "2013-05-19",
+      "min_stage": 1,
+      "max_stage": 30
+    },
+    {
+      "league": "Portugal Liga ZON Sagres",
+      "league_id": 17642,
+      "season": "2013/2014",
+      "matches": 240,
+      "first_date": "2013-08-16",
+      "last_date": "2014-05-11",
+      "min_stage": 1,
+      "max_stage": 30
+    },
+    {
+      "league": "Portugal Liga ZON Sagres",
+      "league_id": 17642,
+      "season": "2014/2015",
+      "matches": 306,
+      "first_date": "2014-08-15",
+      "last_date": "2015-05-23",
+      "min_stage": 1,
+      "max_stage": 34
+    },
+    {
+      "league": "Portugal Liga ZON Sagres",
+      "league_id": 17642,
+      "season": "2015/2016",
+      "matches": 306,
+      "first_date": "2015-08-14",
+      "last_date": "2016-05-15",
+      "min_stage": 1,
+      "max_stage": 34
+    },
+    {
+      "league": "Scotland Premier League",
+      "league_id": 19694,
+      "season": "2008/2009",
+      "matches": 228,
+      "first_date": "2008-08-09",
+      "last_date": "2009-05-24",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "Scotland Premier League",
+      "league_id": 19694,
+      "season": "2009/2010",
+      "matches": 228,
+      "first_date": "2009-08-15",
+      "last_date": "2010-05-09",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "Scotland Premier League",
+      "league_id": 19694,
+      "season": "2010/2011",
+      "matches": 228,
+      "first_date": "2010-08-14",
+      "last_date": "2011-05-15",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "Scotland Premier League",
+      "league_id": 19694,
+      "season": "2011/2012",
+      "matches": 228,
+      "first_date": "2011-07-23",
+      "last_date": "2012-05-13",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "Scotland Premier League",
+      "league_id": 19694,
+      "season": "2012/2013",
+      "matches": 228,
+      "first_date": "2012-08-04",
+      "last_date": "2013-05-19",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "Scotland Premier League",
+      "league_id": 19694,
+      "season": "2013/2014",
+      "matches": 228,
+      "first_date": "2013-08-02",
+      "last_date": "2014-05-11",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "Scotland Premier League",
+      "league_id": 19694,
+      "season": "2014/2015",
+      "matches": 228,
+      "first_date": "2014-08-09",
+      "last_date": "2015-05-24",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "Scotland Premier League",
+      "league_id": 19694,
+      "season": "2015/2016",
+      "matches": 228,
+      "first_date": "2015-08-01",
+      "last_date": "2016-05-15",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "Spain LIGA BBVA",
+      "league_id": 21518,
+      "season": "2008/2009",
+      "matches": 380,
+      "first_date": "2008-08-30",
+      "last_date": "2009-05-31",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "Spain LIGA BBVA",
+      "league_id": 21518,
+      "season": "2009/2010",
+      "matches": 380,
+      "first_date": "2009-08-29",
+      "last_date": "2010-05-16",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "Spain LIGA BBVA",
+      "league_id": 21518,
+      "season": "2010/2011",
+      "matches": 380,
+      "first_date": "2010-08-28",
+      "last_date": "2011-05-21",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "Spain LIGA BBVA",
+      "league_id": 21518,
+      "season": "2011/2012",
+      "matches": 380,
+      "first_date": "2011-08-27",
+      "last_date": "2012-05-13",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "Spain LIGA BBVA",
+      "league_id": 21518,
+      "season": "2012/2013",
+      "matches": 380,
+      "first_date": "2012-08-18",
+      "last_date": "2013-06-01",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "Spain LIGA BBVA",
+      "league_id": 21518,
+      "season": "2013/2014",
+      "matches": 380,
+      "first_date": "2013-08-17",
+      "last_date": "2014-05-18",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "Spain LIGA BBVA",
+      "league_id": 21518,
+      "season": "2014/2015",
+      "matches": 380,
+      "first_date": "2014-08-23",
+      "last_date": "2015-05-23",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "Spain LIGA BBVA",
+      "league_id": 21518,
+      "season": "2015/2016",
+      "matches": 380,
+      "first_date": "2015-08-21",
+      "last_date": "2016-05-15",
+      "min_stage": 1,
+      "max_stage": 38
+    },
+    {
+      "league": "Switzerland Super League",
+      "league_id": 24558,
+      "season": "2008/2009",
+      "matches": 180,
+      "first_date": "2008-07-18",
+      "last_date": "2009-05-30",
+      "min_stage": 1,
+      "max_stage": 36
+    },
+    {
+      "league": "Switzerland Super League",
+      "league_id": 24558,
+      "season": "2009/2010",
+      "matches": 180,
+      "first_date": "2009-07-11",
+      "last_date": "2010-05-16",
+      "min_stage": 1,
+      "max_stage": 36
+    },
+    {
+      "league": "Switzerland Super League",
+      "league_id": 24558,
+      "season": "2010/2011",
+      "matches": 180,
+      "first_date": "2010-07-17",
+      "last_date": "2011-05-25",
+      "min_stage": 1,
+      "max_stage": 36
+    },
+    {
+      "league": "Switzerland Super League",
+      "league_id": 24558,
+      "season": "2011/2012",
+      "matches": 162,
+      "first_date": "2011-07-16",
+      "last_date": "2012-05-23",
+      "min_stage": 1,
+      "max_stage": 36
+    },
+    {
+      "league": "Switzerland Super League",
+      "league_id": 24558,
+      "season": "2012/2013",
+      "matches": 180,
+      "first_date": "2012-07-13",
+      "last_date": "2013-06-01",
+      "min_stage": 1,
+      "max_stage": 36
+    },
+    {
+      "league": "Switzerland Super League",
+      "league_id": 24558,
+      "season": "2013/2014",
+      "matches": 180,
+      "first_date": "2013-07-13",
+      "last_date": "2014-05-18",
+      "min_stage": 1,
+      "max_stage": 36
+    },
+    {
+      "league": "Switzerland Super League",
+      "league_id": 24558,
+      "season": "2014/2015",
+      "matches": 180,
+      "first_date": "2014-07-19",
+      "last_date": "2015-05-29",
+      "min_stage": 1,
+      "max_stage": 36
+    },
+    {
+      "league": "Switzerland Super League",
+      "league_id": 24558,
+      "season": "2015/2016",
+      "matches": 180,
+      "first_date": "2015-07-18",
+      "last_date": "2016-05-25",
+      "min_stage": 1,
+      "max_stage": 36
+    }
+  ],
+  "core_query_results": [
+    [
+      {
+        "table_name": "Country",
+        "row_count": 11
+      },
+      {
+        "table_name": "League",
+        "row_count": 11
+      },
+      {
+        "table_name": "Team",
+        "row_count": 299
+      },
+      {
+        "table_name": "Match",
+        "row_count": 25979
+      }
+    ],
+    [
+      {
+        "league_id": 1,
+        "season": "2008/2009",
+        "raw_match_rows": 306,
+        "distinct_nonnull_match_ids": 306,
+        "first_parseable_match_date": "2008-08-16",
+        "last_parseable_match_date": "2009-05-16",
+        "distinct_home_teams": 18,
+        "distinct_away_teams": 18
+      },
+      {
+        "league_id": 1,
+        "season": "2009/2010",
+        "raw_match_rows": 210,
+        "distinct_nonnull_match_ids": 210,
+        "first_parseable_match_date": "2009-07-31",
+        "last_parseable_match_date": "2010-03-21",
+        "distinct_home_teams": 15,
+        "distinct_away_teams": 15
+      },
+      {
+        "league_id": 1,
+        "season": "2010/2011",
+        "raw_match_rows": 240,
+        "distinct_nonnull_match_ids": 240,
+        "first_parseable_match_date": "2010-07-30",
+        "last_parseable_match_date": "2011-03-23",
+        "distinct_home_teams": 16,
+        "distinct_away_teams": 16
+      },
+      {
+        "league_id": 1,
+        "season": "2011/2012",
+        "raw_match_rows": 240,
+        "distinct_nonnull_match_ids": 240,
+        "first_parseable_match_date": "2011-07-29",
+        "last_parseable_match_date": "2012-03-21",
+        "distinct_home_teams": 16,
+        "distinct_away_teams": 16
+      },
+      {
+        "league_id": 1,
+        "season": "2012/2013",
+        "raw_match_rows": 240,
+        "distinct_nonnull_match_ids": 240,
+        "first_parseable_match_date": "2012-07-28",
+        "last_parseable_match_date": "2013-03-16",
+        "distinct_home_teams": 16,
+        "distinct_away_teams": 16
+      },
+      {
+        "league_id": 1,
+        "season": "2013/2014",
+        "raw_match_rows": 12,
+        "distinct_nonnull_match_ids": 12,
+        "first_parseable_match_date": "2014-03-29",
+        "last_parseable_match_date": "2014-05-03",
+        "distinct_home_teams": 4,
+        "distinct_away_teams": 4
+      },
+      {
+        "league_id": 1,
+        "season": "2014/2015",
+        "raw_match_rows": 240,
+        "distinct_nonnull_match_ids": 240,
+        "first_parseable_match_date": "2014-07-25",
+        "last_parseable_match_date": "2015-03-15",
+        "distinct_home_teams": 16,
+        "distinct_away_teams": 16
+      },
+      {
+        "league_id": 1,
+        "season": "2015/2016",
+        "raw_match_rows": 240,
+        "distinct_nonnull_match_ids": 240,
+        "first_parseable_match_date": "2015-07-24",
+        "last_parseable_match_date": "2016-03-13",
+        "distinct_home_teams": 16,
+        "distinct_away_teams": 16
+      },
+      {
+        "league_id": 1729,
+        "season": "2008/2009",
+        "raw_match_rows": 380,
+        "distinct_nonnull_match_ids": 380,
+        "first_parseable_match_date": "2008-08-16",
+        "last_parseable_match_date": "2009-05-24",
+        "distinct_home_teams": 20,
+        "distinct_away_teams": 20
+      },
+      {
+        "league_id": 1729,
+        "season": "2009/2010",
+        "raw_match_rows": 380,
+        "distinct_nonnull_match_ids": 380,
+        "first_parseable_match_date": "2009-08-15",
+        "last_parseable_match_date": "2010-05-09",
+        "distinct_home_teams": 20,
+        "distinct_away_teams": 20
+      },
+      {
+        "league_id": 1729,
+        "season": "2010/2011",
+        "raw_match_rows": 380,
+        "distinct_nonnull_match_ids": 380,
+        "first_parseable_match_date": "2010-08-14",
+        "last_parseable_match_date": "2011-05-22",
+        "distinct_home_teams": 20,
+        "distinct_away_teams": 20
+      },
+      {
+        "league_id": 1729,
+        "season": "2011/2012",
+        "raw_match_rows": 380,
+        "distinct_nonnull_match_ids": 380,
+        "first_parseable_match_date": "2011-08-13",
+        "last_parseable_match_date": "2012-05-13",
+        "distinct_home_teams": 20,
+        "distinct_away_teams": 20
+      },
+      {
+        "league_id": 1729,
+        "season": "2012/2013",
+        "raw_match_rows": 380,
+        "distinct_nonnull_match_ids": 380,
+        "first_parseable_match_date": "2012-08-18",
+        "last_parseable_match_date": "2013-05-19",
+        "distinct_home_teams": 20,
+        "distinct_away_teams": 20
+      },
+      {
+        "league_id": 1729,
+        "season": "2013/2014",
+        "raw_match_rows": 380,
+        "distinct_nonnull_match_ids": 380,
+        "first_parseable_match_date": "2013-08-17",
+        "last_parseable_match_date": "2014-05-11",
+        "distinct_home_teams": 20,
+        "distinct_away_teams": 20
+      },
+      {
+        "league_id": 1729,
+        "season": "2014/2015",
+        "raw_match_rows": 380,
+        "distinct_nonnull_match_ids": 380,
+        "first_parseable_match_date": "2014-08-16",
+        "last_parseable_match_date": "2015-05-24",
+        "distinct_home_teams": 20,
+        "distinct_away_teams": 20
+      },
+      {
+        "league_id": 1729,
+        "season": "2015/2016",
+        "raw_match_rows": 380,
+        "distinct_nonnull_match_ids": 380,
+        "first_parseable_match_date": "2015-08-08",
+        "last_parseable_match_date": "2016-05-17",
+        "distinct_home_teams": 20,
+        "distinct_away_teams": 20
+      },
+      {
+        "league_id": 4769,
+        "season": "2008/2009",
+        "raw_match_rows": 380,
+        "distinct_nonnull_match_ids": 380,
+        "first_parseable_match_date": "2008-08-09",
+        "last_parseable_match_date": "2009-05-30",
+        "distinct_home_teams": 20,
+        "distinct_away_teams": 20
+      },
+      {
+        "league_id": 4769,
+        "season": "2009/2010",
+        "raw_match_rows": 380,
+        "distinct_nonnull_match_ids": 380,
+        "first_parseable_match_date": "2009-08-08",
+        "last_parseable_match_date": "2010-05-15",
+        "distinct_home_teams": 20,
+        "distinct_away_teams": 20
+      },
+      {
+        "league_id": 4769,
+        "season": "2010/2011",
+        "raw_match_rows": 380,
+        "distinct_nonnull_match_ids": 380,
+        "first_parseable_match_date": "2010-08-07",
+        "last_parseable_match_date": "2011-05-29",
+        "distinct_home_teams": 20,
+        "distinct_away_teams": 20
+      },
+      {
+        "league_id": 4769,
+        "season": "2011/2012",
+        "raw_match_rows": 380,
+        "distinct_nonnull_match_ids": 380,
+        "first_parseable_match_date": "2011-08-06",
+        "last_parseable_match_date": "2012-05-20",
+        "distinct_home_teams": 20,
+        "distinct_away_teams": 20
+      },
+      {
+        "league_id": 4769,
+        "season": "2012/2013",
+        "raw_match_rows": 380,
+        "distinct_nonnull_match_ids": 380,
+        "first_parseable_match_date": "2012-08-10",
+        "last_parseable_match_date": "2013-05-26",
+        "distinct_home_teams": 20,
+        "distinct_away_teams": 20
+      },
+      {
+        "league_id": 4769,
+        "season": "2013/2014",
+        "raw_match_rows": 380,
+        "distinct_nonnull_match_ids": 380,
+        "first_parseable_match_date": "2013-08-09",
+        "last_parseable_match_date": "2014-05-17",
+        "distinct_home_teams": 20,
+        "distinct_away_teams": 20
+      },
+      {
+        "league_id": 4769,
+        "season": "2014/2015",
+        "raw_match_rows": 380,
+        "distinct_nonnull_match_ids": 380,
+        "first_parseable_match_date": "2014-08-08",
+        "last_parseable_match_date": "2015-05-23",
+        "distinct_home_teams": 20,
+        "distinct_away_teams": 20
+      },
+      {
+        "league_id": 4769,
+        "season": "2015/2016",
+        "raw_match_rows": 380,
+        "distinct_nonnull_match_ids": 380,
+        "first_parseable_match_date": "2015-08-07",
+        "last_parseable_match_date": "2016-05-14",
+        "distinct_home_teams": 20,
+        "distinct_away_teams": 20
+      },
+      {
+        "league_id": 7809,
+        "season": "2008/2009",
+        "raw_match_rows": 306,
+        "distinct_nonnull_match_ids": 306,
+        "first_parseable_match_date": "2008-08-15",
+        "last_parseable_match_date": "2009-05-23",
+        "distinct_home_teams": 18,
+        "distinct_away_teams": 18
+      },
+      {
+        "league_id": 7809,
+        "season": "2009/2010",
+        "raw_match_rows": 306,
+        "distinct_nonnull_match_ids": 306,
+        "first_parseable_match_date": "2009-08-07",
+        "last_parseable_match_date": "2010-05-08",
+        "distinct_home_teams": 18,
+        "distinct_away_teams": 18
+      },
+      {
+        "league_id": 7809,
+        "season": "2010/2011",
+        "raw_match_rows": 306,
+        "distinct_nonnull_match_ids": 306,
+        "first_parseable_match_date": "2010-08-20",
+        "last_parseable_match_date": "2011-05-14",
+        "distinct_home_teams": 18,
+        "distinct_away_teams": 18
+      },
+      {
+        "league_id": 7809,
+        "season": "2011/2012",
+        "raw_match_rows": 306,
+        "distinct_nonnull_match_ids": 306,
+        "first_parseable_match_date": "2011-08-05",
+        "last_parseable_match_date": "2012-05-05",
+        "distinct_home_teams": 18,
+        "distinct_away_teams": 18
+      },
+      {
+        "league_id": 7809,
+        "season": "2012/2013",
+        "raw_match_rows": 306,
+        "distinct_nonnull_match_ids": 306,
+        "first_parseable_match_date": "2012-08-24",
+        "last_parseable_match_date": "2013-05-18",
+        "distinct_home_teams": 18,
+        "distinct_away_teams": 18
+      },
+      {
+        "league_id": 7809,
+        "season": "2013/2014",
+        "raw_match_rows": 306,
+        "distinct_nonnull_match_ids": 306,
+        "first_parseable_match_date": "2013-08-09",
+        "last_parseable_match_date": "2014-05-10",
+        "distinct_home_teams": 18,
+        "distinct_away_teams": 18
+      },
+      {
+        "league_id": 7809,
+        "season": "2014/2015",
+        "raw_match_rows": 306,
+        "distinct_nonnull_match_ids": 306,
+        "first_parseable_match_date": "2014-08-22",
+        "last_parseable_match_date": "2015-05-23",
+        "distinct_home_teams": 18,
+        "distinct_away_teams": 18
+      },
+      {
+        "league_id": 7809,
+        "season": "2015/2016",
+        "raw_match_rows": 306,
+        "distinct_nonnull_match_ids": 306,
+        "first_parseable_match_date": "2015-08-14",
+        "last_parseable_match_date": "2016-05-14",
+        "distinct_home_teams": 18,
+        "distinct_away_teams": 18
+      },
+      {
+        "league_id": 10257,
+        "season": "2008/2009",
+        "raw_match_rows": 380,
+        "distinct_nonnull_match_ids": 380,
+        "first_parseable_match_date": "2008-08-30",
+        "last_parseable_match_date": "2009-05-31",
+        "distinct_home_teams": 20,
+        "distinct_away_teams": 20
+      },
+      {
+        "league_id": 10257,
+        "season": "2009/2010",
+        "raw_match_rows": 380,
+        "distinct_nonnull_match_ids": 380,
+        "first_parseable_match_date": "2009-08-22",
+        "last_parseable_match_date": "2010-05-16",
+        "distinct_home_teams": 20,
+        "distinct_away_teams": 20
+      },
+      {
+        "league_id": 10257,
+        "season": "2010/2011",
+        "raw_match_rows": 380,
+        "distinct_nonnull_match_ids": 380,
+        "first_parseable_match_date": "2010-08-28",
+        "last_parseable_match_date": "2011-05-22",
+        "distinct_home_teams": 20,
+        "distinct_away_teams": 20
+      },
+      {
+        "league_id": 10257,
+        "season": "2011/2012",
+        "raw_match_rows": 358,
+        "distinct_nonnull_match_ids": 358,
+        "first_parseable_match_date": "2011-09-09",
+        "last_parseable_match_date": "2012-05-13",
+        "distinct_home_teams": 20,
+        "distinct_away_teams": 20
+      },
+      {
+        "league_id": 10257,
+        "season": "2012/2013",
+        "raw_match_rows": 380,
+        "distinct_nonnull_match_ids": 380,
+        "first_parseable_match_date": "2012-08-25",
+        "last_parseable_match_date": "2013-05-19",
+        "distinct_home_teams": 20,
+        "distinct_away_teams": 20
+      },
+      {
+        "league_id": 10257,
+        "season": "2013/2014",
+        "raw_match_rows": 380,
+        "distinct_nonnull_match_ids": 380,
+        "first_parseable_match_date": "2013-08-24",
+        "last_parseable_match_date": "2014-05-18",
+        "distinct_home_teams": 20,
+        "distinct_away_teams": 20
+      },
+      {
+        "league_id": 10257,
+        "season": "2014/2015",
+        "raw_match_rows": 379,
+        "distinct_nonnull_match_ids": 379,
+        "first_parseable_match_date": "2014-08-30",
+        "last_parseable_match_date": "2015-05-31",
+        "distinct_home_teams": 20,
+        "distinct_away_teams": 20
+      },
+      {
+        "league_id": 10257,
+        "season": "2015/2016",
+        "raw_match_rows": 380,
+        "distinct_nonnull_match_ids": 380,
+        "first_parseable_match_date": "2015-08-22",
+        "last_parseable_match_date": "2016-05-15",
+        "distinct_home_teams": 20,
+        "distinct_away_teams": 20
+      },
+      {
+        "league_id": 13274,
+        "season": "2008/2009",
+        "raw_match_rows": 306,
+        "distinct_nonnull_match_ids": 306,
+        "first_parseable_match_date": "2008-08-29",
+        "last_parseable_match_date": "2009-05-10",
+        "distinct_home_teams": 18,
+        "distinct_away_teams": 18
+      },
+      {
+        "league_id": 13274,
+        "season": "2009/2010",
+        "raw_match_rows": 306,
+        "distinct_nonnull_match_ids": 306,
+        "first_parseable_match_date": "2009-07-31",
+        "last_parseable_match_date": "2010-05-02",
+        "distinct_home_teams": 18,
+        "distinct_away_teams": 18
+      },
+      {
+        "league_id": 13274,
+        "season": "2010/2011",
+        "raw_match_rows": 306,
+        "distinct_nonnull_match_ids": 306,
+        "first_parseable_match_date": "2010-08-06",
+        "last_parseable_match_date": "2011-05-15",
+        "distinct_home_teams": 18,
+        "distinct_away_teams": 18
+      },
+      {
+        "league_id": 13274,
+        "season": "2011/2012",
+        "raw_match_rows": 306,
+        "distinct_nonnull_match_ids": 306,
+        "first_parseable_match_date": "2011-08-05",
+        "last_parseable_match_date": "2012-05-06",
+        "distinct_home_teams": 18,
+        "distinct_away_teams": 18
+      },
+      {
+        "league_id": 13274,
+        "season": "2012/2013",
+        "raw_match_rows": 306,
+        "distinct_nonnull_match_ids": 306,
+        "first_parseable_match_date": "2012-08-10",
+        "last_parseable_match_date": "2013-05-12",
+        "distinct_home_teams": 18,
+        "distinct_away_teams": 18
+      },
+      {
+        "league_id": 13274,
+        "season": "2013/2014",
+        "raw_match_rows": 306,
+        "distinct_nonnull_match_ids": 306,
+        "first_parseable_match_date": "2013-08-02",
+        "last_parseable_match_date": "2014-05-03",
+        "distinct_home_teams": 18,
+        "distinct_away_teams": 18
+      },
+      {
+        "league_id": 13274,
+        "season": "2014/2015",
+        "raw_match_rows": 306,
+        "distinct_nonnull_match_ids": 306,
+        "first_parseable_match_date": "2014-08-08",
+        "last_parseable_match_date": "2015-05-17",
+        "distinct_home_teams": 18,
+        "distinct_away_teams": 18
+      },
+      {
+        "league_id": 13274,
+        "season": "2015/2016",
+        "raw_match_rows": 306,
+        "distinct_nonnull_match_ids": 306,
+        "first_parseable_match_date": "2015-08-08",
+        "last_parseable_match_date": "2016-05-08",
+        "distinct_home_teams": 18,
+        "distinct_away_teams": 18
+      },
+      {
+        "league_id": 15722,
+        "season": "2008/2009",
+        "raw_match_rows": 240,
+        "distinct_nonnull_match_ids": 240,
+        "first_parseable_match_date": "2008-08-08",
+        "last_parseable_match_date": "2009-05-30",
+        "distinct_home_teams": 16,
+        "distinct_away_teams": 16
+      },
+      {
+        "league_id": 15722,
+        "season": "2009/2010",
+        "raw_match_rows": 240,
+        "distinct_nonnull_match_ids": 240,
+        "first_parseable_match_date": "2009-07-31",
+        "last_parseable_match_date": "2010-05-15",
+        "distinct_home_teams": 16,
+        "distinct_away_teams": 16
+      },
+      {
+        "league_id": 15722,
+        "season": "2010/2011",
+        "raw_match_rows": 240,
+        "distinct_nonnull_match_ids": 240,
+        "first_parseable_match_date": "2010-08-06",
+        "last_parseable_match_date": "2011-05-29",
+        "distinct_home_teams": 16,
+        "distinct_away_teams": 16
+      },
+      {
+        "league_id": 15722,
+        "season": "2011/2012",
+        "raw_match_rows": 240,
+        "distinct_nonnull_match_ids": 240,
+        "first_parseable_match_date": "2011-07-29",
+        "last_parseable_match_date": "2012-05-06",
+        "distinct_home_teams": 16,
+        "distinct_away_teams": 16
+      },
+      {
+        "league_id": 15722,
+        "season": "2012/2013",
+        "raw_match_rows": 240,
+        "distinct_nonnull_match_ids": 240,
+        "first_parseable_match_date": "2012-08-17",
+        "last_parseable_match_date": "2013-06-02",
+        "distinct_home_teams": 16,
+        "distinct_away_teams": 16
+      },
+      {
+        "league_id": 15722,
+        "season": "2013/2014",
+        "raw_match_rows": 240,
+        "distinct_nonnull_match_ids": 240,
+        "first_parseable_match_date": "2013-07-19",
+        "last_parseable_match_date": "2014-04-12",
+        "distinct_home_teams": 16,
+        "distinct_away_teams": 16
+      },
+      {
+        "league_id": 15722,
+        "season": "2014/2015",
+        "raw_match_rows": 240,
+        "distinct_nonnull_match_ids": 240,
+        "first_parseable_match_date": "2014-07-18",
+        "last_parseable_match_date": "2015-04-29",
+        "distinct_home_teams": 16,
+        "distinct_away_teams": 16
+      },
+      {
+        "league_id": 15722,
+        "season": "2015/2016",
+        "raw_match_rows": 240,
+        "distinct_nonnull_match_ids": 240,
+        "first_parseable_match_date": "2015-07-17",
+        "last_parseable_match_date": "2016-04-09",
+        "distinct_home_teams": 16,
+        "distinct_away_teams": 16
+      },
+      {
+        "league_id": 17642,
+        "season": "2008/2009",
+        "raw_match_rows": 240,
+        "distinct_nonnull_match_ids": 240,
+        "first_parseable_match_date": "2008-08-22",
+        "last_parseable_match_date": "2009-05-24",
+        "distinct_home_teams": 16,
+        "distinct_away_teams": 16
+      },
+      {
+        "league_id": 17642,
+        "season": "2009/2010",
+        "raw_match_rows": 240,
+        "distinct_nonnull_match_ids": 240,
+        "first_parseable_match_date": "2009-08-14",
+        "last_parseable_match_date": "2010-05-09",
+        "distinct_home_teams": 16,
+        "distinct_away_teams": 16
+      },
+      {
+        "league_id": 17642,
+        "season": "2010/2011",
+        "raw_match_rows": 240,
+        "distinct_nonnull_match_ids": 240,
+        "first_parseable_match_date": "2010-08-13",
+        "last_parseable_match_date": "2011-05-14",
+        "distinct_home_teams": 16,
+        "distinct_away_teams": 16
+      },
+      {
+        "league_id": 17642,
+        "season": "2011/2012",
+        "raw_match_rows": 240,
+        "distinct_nonnull_match_ids": 240,
+        "first_parseable_match_date": "2011-08-12",
+        "last_parseable_match_date": "2012-05-12",
+        "distinct_home_teams": 16,
+        "distinct_away_teams": 16
+      },
+      {
+        "league_id": 17642,
+        "season": "2012/2013",
+        "raw_match_rows": 240,
+        "distinct_nonnull_match_ids": 240,
+        "first_parseable_match_date": "2012-08-17",
+        "last_parseable_match_date": "2013-05-19",
+        "distinct_home_teams": 16,
+        "distinct_away_teams": 16
+      },
+      {
+        "league_id": 17642,
+        "season": "2013/2014",
+        "raw_match_rows": 240,
+        "distinct_nonnull_match_ids": 240,
+        "first_parseable_match_date": "2013-08-16",
+        "last_parseable_match_date": "2014-05-11",
+        "distinct_home_teams": 16,
+        "distinct_away_teams": 16
+      },
+      {
+        "league_id": 17642,
+        "season": "2014/2015",
+        "raw_match_rows": 306,
+        "distinct_nonnull_match_ids": 306,
+        "first_parseable_match_date": "2014-08-15",
+        "last_parseable_match_date": "2015-05-23",
+        "distinct_home_teams": 18,
+        "distinct_away_teams": 18
+      },
+      {
+        "league_id": 17642,
+        "season": "2015/2016",
+        "raw_match_rows": 306,
+        "distinct_nonnull_match_ids": 306,
+        "first_parseable_match_date": "2015-08-14",
+        "last_parseable_match_date": "2016-05-15",
+        "distinct_home_teams": 18,
+        "distinct_away_teams": 18
+      },
+      {
+        "league_id": 19694,
+        "season": "2008/2009",
+        "raw_match_rows": 228,
+        "distinct_nonnull_match_ids": 228,
+        "first_parseable_match_date": "2008-08-09",
+        "last_parseable_match_date": "2009-05-24",
+        "distinct_home_teams": 12,
+        "distinct_away_teams": 12
+      },
+      {
+        "league_id": 19694,
+        "season": "2009/2010",
+        "raw_match_rows": 228,
+        "distinct_nonnull_match_ids": 228,
+        "first_parseable_match_date": "2009-08-15",
+        "last_parseable_match_date": "2010-05-09",
+        "distinct_home_teams": 12,
+        "distinct_away_teams": 12
+      },
+      {
+        "league_id": 19694,
+        "season": "2010/2011",
+        "raw_match_rows": 228,
+        "distinct_nonnull_match_ids": 228,
+        "first_parseable_match_date": "2010-08-14",
+        "last_parseable_match_date": "2011-05-15",
+        "distinct_home_teams": 12,
+        "distinct_away_teams": 12
+      },
+      {
+        "league_id": 19694,
+        "season": "2011/2012",
+        "raw_match_rows": 228,
+        "distinct_nonnull_match_ids": 228,
+        "first_parseable_match_date": "2011-07-23",
+        "last_parseable_match_date": "2012-05-13",
+        "distinct_home_teams": 12,
+        "distinct_away_teams": 12
+      },
+      {
+        "league_id": 19694,
+        "season": "2012/2013",
+        "raw_match_rows": 228,
+        "distinct_nonnull_match_ids": 228,
+        "first_parseable_match_date": "2012-08-04",
+        "last_parseable_match_date": "2013-05-19",
+        "distinct_home_teams": 12,
+        "distinct_away_teams": 12
+      },
+      {
+        "league_id": 19694,
+        "season": "2013/2014",
+        "raw_match_rows": 228,
+        "distinct_nonnull_match_ids": 228,
+        "first_parseable_match_date": "2013-08-02",
+        "last_parseable_match_date": "2014-05-11",
+        "distinct_home_teams": 12,
+        "distinct_away_teams": 12
+      },
+      {
+        "league_id": 19694,
+        "season": "2014/2015",
+        "raw_match_rows": 228,
+        "distinct_nonnull_match_ids": 228,
+        "first_parseable_match_date": "2014-08-09",
+        "last_parseable_match_date": "2015-05-24",
+        "distinct_home_teams": 12,
+        "distinct_away_teams": 12
+      },
+      {
+        "league_id": 19694,
+        "season": "2015/2016",
+        "raw_match_rows": 228,
+        "distinct_nonnull_match_ids": 228,
+        "first_parseable_match_date": "2015-08-01",
+        "last_parseable_match_date": "2016-05-15",
+        "distinct_home_teams": 12,
+        "distinct_away_teams": 12
+      },
+      {
+        "league_id": 21518,
+        "season": "2008/2009",
+        "raw_match_rows": 380,
+        "distinct_nonnull_match_ids": 380,
+        "first_parseable_match_date": "2008-08-30",
+        "last_parseable_match_date": "2009-05-31",
+        "distinct_home_teams": 20,
+        "distinct_away_teams": 20
+      },
+      {
+        "league_id": 21518,
+        "season": "2009/2010",
+        "raw_match_rows": 380,
+        "distinct_nonnull_match_ids": 380,
+        "first_parseable_match_date": "2009-08-29",
+        "last_parseable_match_date": "2010-05-16",
+        "distinct_home_teams": 20,
+        "distinct_away_teams": 20
+      },
+      {
+        "league_id": 21518,
+        "season": "2010/2011",
+        "raw_match_rows": 380,
+        "distinct_nonnull_match_ids": 380,
+        "first_parseable_match_date": "2010-08-28",
+        "last_parseable_match_date": "2011-05-21",
+        "distinct_home_teams": 20,
+        "distinct_away_teams": 20
+      },
+      {
+        "league_id": 21518,
+        "season": "2011/2012",
+        "raw_match_rows": 380,
+        "distinct_nonnull_match_ids": 380,
+        "first_parseable_match_date": "2011-08-27",
+        "last_parseable_match_date": "2012-05-13",
+        "distinct_home_teams": 20,
+        "distinct_away_teams": 20
+      },
+      {
+        "league_id": 21518,
+        "season": "2012/2013",
+        "raw_match_rows": 380,
+        "distinct_nonnull_match_ids": 380,
+        "first_parseable_match_date": "2012-08-18",
+        "last_parseable_match_date": "2013-06-01",
+        "distinct_home_teams": 20,
+        "distinct_away_teams": 20
+      },
+      {
+        "league_id": 21518,
+        "season": "2013/2014",
+        "raw_match_rows": 380,
+        "distinct_nonnull_match_ids": 380,
+        "first_parseable_match_date": "2013-08-17",
+        "last_parseable_match_date": "2014-05-18",
+        "distinct_home_teams": 20,
+        "distinct_away_teams": 20
+      },
+      {
+        "league_id": 21518,
+        "season": "2014/2015",
+        "raw_match_rows": 380,
+        "distinct_nonnull_match_ids": 380,
+        "first_parseable_match_date": "2014-08-23",
+        "last_parseable_match_date": "2015-05-23",
+        "distinct_home_teams": 20,
+        "distinct_away_teams": 20
+      },
+      {
+        "league_id": 21518,
+        "season": "2015/2016",
+        "raw_match_rows": 380,
+        "distinct_nonnull_match_ids": 380,
+        "first_parseable_match_date": "2015-08-21",
+        "last_parseable_match_date": "2016-05-15",
+        "distinct_home_teams": 20,
+        "distinct_away_teams": 20
+      },
+      {
+        "league_id": 24558,
+        "season": "2008/2009",
+        "raw_match_rows": 180,
+        "distinct_nonnull_match_ids": 180,
+        "first_parseable_match_date": "2008-07-18",
+        "last_parseable_match_date": "2009-05-30",
+        "distinct_home_teams": 10,
+        "distinct_away_teams": 10
+      },
+      {
+        "league_id": 24558,
+        "season": "2009/2010",
+        "raw_match_rows": 180,
+        "distinct_nonnull_match_ids": 180,
+        "first_parseable_match_date": "2009-07-11",
+        "last_parseable_match_date": "2010-05-16",
+        "distinct_home_teams": 10,
+        "distinct_away_teams": 10
+      },
+      {
+        "league_id": 24558,
+        "season": "2010/2011",
+        "raw_match_rows": 180,
+        "distinct_nonnull_match_ids": 180,
+        "first_parseable_match_date": "2010-07-17",
+        "last_parseable_match_date": "2011-05-25",
+        "distinct_home_teams": 10,
+        "distinct_away_teams": 10
+      },
+      {
+        "league_id": 24558,
+        "season": "2011/2012",
+        "raw_match_rows": 162,
+        "distinct_nonnull_match_ids": 162,
+        "first_parseable_match_date": "2011-07-16",
+        "last_parseable_match_date": "2012-05-23",
+        "distinct_home_teams": 10,
+        "distinct_away_teams": 10
+      },
+      {
+        "league_id": 24558,
+        "season": "2012/2013",
+        "raw_match_rows": 180,
+        "distinct_nonnull_match_ids": 180,
+        "first_parseable_match_date": "2012-07-13",
+        "last_parseable_match_date": "2013-06-01",
+        "distinct_home_teams": 10,
+        "distinct_away_teams": 10
+      },
+      {
+        "league_id": 24558,
+        "season": "2013/2014",
+        "raw_match_rows": 180,
+        "distinct_nonnull_match_ids": 180,
+        "first_parseable_match_date": "2013-07-13",
+        "last_parseable_match_date": "2014-05-18",
+        "distinct_home_teams": 10,
+        "distinct_away_teams": 10
+      },
+      {
+        "league_id": 24558,
+        "season": "2014/2015",
+        "raw_match_rows": 180,
+        "distinct_nonnull_match_ids": 180,
+        "first_parseable_match_date": "2014-07-19",
+        "last_parseable_match_date": "2015-05-29",
+        "distinct_home_teams": 10,
+        "distinct_away_teams": 10
+      },
+      {
+        "league_id": 24558,
+        "season": "2015/2016",
+        "raw_match_rows": 180,
+        "distinct_nonnull_match_ids": 180,
+        "first_parseable_match_date": "2015-07-18",
+        "last_parseable_match_date": "2016-05-25",
+        "distinct_home_teams": 10,
+        "distinct_away_teams": 10
+      }
+    ],
+    [
+      {
+        "raw_match_rows": 25979,
+        "null_match_ids": 0,
+        "null_country_ids": 0,
+        "null_league_ids": 0,
+        "null_seasons": 0,
+        "blank_seasons": 0,
+        "null_dates": 0,
+        "blank_dates": 0,
+        "null_home_team_ids": 0,
+        "null_away_team_ids": 0,
+        "null_home_goals": 0,
+        "null_away_goals": 0
+      }
+    ],
+    [
+      {
+        "raw_match_rows": 25979,
+        "rows_with_missing_score": 0,
+        "rows_with_nonnumeric_score": 0,
+        "rows_with_negative_score": 0,
+        "rows_with_noninteger_score": 0,
+        "rows_with_valid_score_pair": 25979,
+        "rows_with_unparseable_nonnull_date": 0
+      }
+    ],
+    [],
+    [],
+    [
+      {
+        "raw_match_rows": 25979,
+        "same_home_and_away_team": 0,
+        "unmatched_home_team_ids": 0,
+        "unmatched_away_team_ids": 0,
+        "unmatched_league_ids": 0,
+        "unmatched_country_ids": 0,
+        "country_league_mismatches": 0
+      }
+    ]
+  ],
+  "key_quality": [
+    {
+      "table": "Country",
+      "key": "id",
+      "rows": 11,
+      "nulls": 0,
+      "distinct_nonnull": 11,
+      "excess_nonnull_duplicates": 0
+    },
+    {
+      "table": "League",
+      "key": "id",
+      "rows": 11,
+      "nulls": 0,
+      "distinct_nonnull": 11,
+      "excess_nonnull_duplicates": 0
+    },
+    {
+      "table": "Team",
+      "key": "id",
+      "rows": 299,
+      "nulls": 0,
+      "distinct_nonnull": 299,
+      "excess_nonnull_duplicates": 0
+    },
+    {
+      "table": "Team",
+      "key": "team_api_id",
+      "rows": 299,
+      "nulls": 0,
+      "distinct_nonnull": 299,
+      "excess_nonnull_duplicates": 0
+    },
+    {
+      "table": "Team",
+      "key": "team_fifa_api_id",
+      "rows": 299,
+      "nulls": 11,
+      "distinct_nonnull": 285,
+      "excess_nonnull_duplicates": 3
+    },
+    {
+      "table": "Player",
+      "key": "id",
+      "rows": 11060,
+      "nulls": 0,
+      "distinct_nonnull": 11060,
+      "excess_nonnull_duplicates": 0
+    },
+    {
+      "table": "Player",
+      "key": "player_api_id",
+      "rows": 11060,
+      "nulls": 0,
+      "distinct_nonnull": 11060,
+      "excess_nonnull_duplicates": 0
+    },
+    {
+      "table": "Player",
+      "key": "player_fifa_api_id",
+      "rows": 11060,
+      "nulls": 0,
+      "distinct_nonnull": 11060,
+      "excess_nonnull_duplicates": 0
+    },
+    {
+      "table": "Match",
+      "key": "id",
+      "rows": 25979,
+      "nulls": 0,
+      "distinct_nonnull": 25979,
+      "excess_nonnull_duplicates": 0
+    },
+    {
+      "table": "Match",
+      "key": "match_api_id",
+      "rows": 25979,
+      "nulls": 0,
+      "distinct_nonnull": 25979,
+      "excess_nonnull_duplicates": 0
+    },
+    {
+      "table": "Team_Attributes",
+      "key": "id",
+      "rows": 1458,
+      "nulls": 0,
+      "distinct_nonnull": 1458,
+      "excess_nonnull_duplicates": 0
+    },
+    {
+      "table": "Player_Attributes",
+      "key": "id",
+      "rows": 183978,
+      "nulls": 0,
+      "distinct_nonnull": 183978,
+      "excess_nonnull_duplicates": 0
+    }
+  ],
+  "attribute_profiles": {
+    "Player_Attributes": {
+      "rows": 183978,
+      "entities": 11060,
+      "first_date": "2007-02-22 00:00:00",
+      "last_date": "2016-07-07 00:00:00",
+      "distinct_dates": 197,
+      "duplicate_entity_date_groups": {
+        "groups": 835,
+        "excess_rows": 836
+      },
+      "orphan_entity_rows": 0
+    },
+    "Team_Attributes": {
+      "rows": 1458,
+      "entities": 288,
+      "first_date": "2010-02-22 00:00:00",
+      "last_date": "2015-09-10 00:00:00",
+      "distinct_dates": 6,
+      "duplicate_entity_date_groups": {
+        "groups": 1,
+        "excess_rows": 1
+      },
+      "orphan_entity_rows": 0
+    }
+  },
+  "lineup_coverage": {
+    "matches": 25979,
+    "complete_22_player_ids": 21374,
+    "complete_44_coordinates": 24140
+  },
+  "lineup_orphans": {
+    "home_player_1": 0,
+    "home_player_2": 0,
+    "home_player_3": 0,
+    "home_player_4": 0,
+    "home_player_5": 0,
+    "home_player_6": 0,
+    "home_player_7": 0,
+    "home_player_8": 0,
+    "home_player_9": 0,
+    "home_player_10": 0,
+    "home_player_11": 0,
+    "away_player_1": 0,
+    "away_player_2": 0,
+    "away_player_3": 0,
+    "away_player_4": 0,
+    "away_player_5": 0,
+    "away_player_6": 0,
+    "away_player_7": 0,
+    "away_player_8": 0,
+    "away_player_9": 0,
+    "away_player_10": 0,
+    "away_player_11": 0
+  },
+  "event_profiles": {
+    "goal": {
+      "nonnull_rows": 14217,
+      "empty_text_rows": 0,
+      "xml_parse_errors": 0,
+      "empty_xml_roots": 993,
+      "xml_rows_with_children": 13224,
+      "root_tags": {
+        "goal": 14217
+      }
+    },
+    "shoton": {
+      "nonnull_rows": 14217,
+      "empty_text_rows": 0,
+      "xml_parse_errors": 0,
+      "empty_xml_roots": 5754,
+      "xml_rows_with_children": 8463,
+      "root_tags": {
+        "shoton": 14217
+      }
+    },
+    "shotoff": {
+      "nonnull_rows": 14217,
+      "empty_text_rows": 0,
+      "xml_parse_errors": 0,
+      "empty_xml_roots": 5754,
+      "xml_rows_with_children": 8463,
+      "root_tags": {
+        "shotoff": 14217
+      }
+    },
+    "foulcommit": {
+      "nonnull_rows": 14217,
+      "empty_text_rows": 0,
+      "xml_parse_errors": 0,
+      "empty_xml_roots": 5752,
+      "xml_rows_with_children": 8465,
+      "root_tags": {
+        "foulcommit": 14217
+      }
+    },
+    "card": {
+      "nonnull_rows": 14217,
+      "empty_text_rows": 0,
+      "xml_parse_errors": 0,
+      "empty_xml_roots": 441,
+      "xml_rows_with_children": 13776,
+      "root_tags": {
+        "card": 14217
+      }
+    },
+    "cross": {
+      "nonnull_rows": 14217,
+      "empty_text_rows": 0,
+      "xml_parse_errors": 0,
+      "empty_xml_roots": 5752,
+      "xml_rows_with_children": 8465,
+      "root_tags": {
+        "cross": 14217
+      }
+    },
+    "corner": {
+      "nonnull_rows": 14217,
+      "empty_text_rows": 0,
+      "xml_parse_errors": 0,
+      "empty_xml_roots": 5753,
+      "xml_rows_with_children": 8464,
+      "root_tags": {
+        "corner": 14217
+      }
+    },
+    "possession": {
+      "nonnull_rows": 14217,
+      "empty_text_rows": 0,
+      "xml_parse_errors": 0,
+      "empty_xml_roots": 5798,
+      "xml_rows_with_children": 8419,
+      "root_tags": {
+        "possession": 14217
+      }
+    }
+  },
+  "event_coverage_by_league": [
+    {
+      "league": "Belgium Jupiler League",
+      "matches": 1728,
+      "goal_nonnull": 0,
+      "possession_nonnull": 0
+    },
+    {
+      "league": "England Premier League",
+      "matches": 3040,
+      "goal_nonnull": 3040,
+      "possession_nonnull": 3040
+    },
+    {
+      "league": "France Ligue 1",
+      "matches": 3040,
+      "goal_nonnull": 2026,
+      "possession_nonnull": 2026
+    },
+    {
+      "league": "Germany 1. Bundesliga",
+      "matches": 2448,
+      "goal_nonnull": 2448,
+      "possession_nonnull": 2448
+    },
+    {
+      "league": "Italy Serie A",
+      "matches": 3017,
+      "goal_nonnull": 3014,
+      "possession_nonnull": 3014
+    },
+    {
+      "league": "Netherlands Eredivisie",
+      "matches": 2448,
+      "goal_nonnull": 530,
+      "possession_nonnull": 530
+    },
+    {
+      "league": "Poland Ekstraklasa",
+      "matches": 1920,
+      "goal_nonnull": 7,
+      "possession_nonnull": 7
+    },
+    {
+      "league": "Portugal Liga ZON Sagres",
+      "matches": 2052,
+      "goal_nonnull": 0,
+      "possession_nonnull": 0
+    },
+    {
+      "league": "Scotland Premier League",
+      "matches": 1824,
+      "goal_nonnull": 13,
+      "possession_nonnull": 13
+    },
+    {
+      "league": "Spain LIGA BBVA",
+      "matches": 3040,
+      "goal_nonnull": 3039,
+      "possession_nonnull": 3039
+    },
+    {
+      "league": "Switzerland Super League",
+      "matches": 1422,
+      "goal_nonnull": 100,
+      "possession_nonnull": 100
+    }
+  ],
+  "odds_profiles": {
+    "B365": {
+      "complete_hda": 22592,
+      "complete_numeric_gt1": 22592
+    },
+    "BW": {
+      "complete_hda": 22575,
+      "complete_numeric_gt1": 22575
+    },
+    "IW": {
+      "complete_hda": 22520,
+      "complete_numeric_gt1": 22520
+    },
+    "LB": {
+      "complete_hda": 22556,
+      "complete_numeric_gt1": 22556
+    },
+    "PS": {
+      "complete_hda": 11168,
+      "complete_numeric_gt1": 11168
+    },
+    "WH": {
+      "complete_hda": 22571,
+      "complete_numeric_gt1": 22571
+    },
+    "SJ": {
+      "complete_hda": 17097,
+      "complete_numeric_gt1": 17097
+    },
+    "VC": {
+      "complete_hda": 22568,
+      "complete_numeric_gt1": 22568
+    },
+    "GB": {
+      "complete_hda": 14162,
+      "complete_numeric_gt1": 14162
+    },
+    "BS": {
+      "complete_hda": 14161,
+      "complete_numeric_gt1": 14161
+    }
+  },
+  "league_season_structure": [
+    {
+      "league": "Belgium Jupiler League",
+      "league_id": 1,
+      "season": "2008/2009",
+      "teams": 18,
+      "min_team_games": 34,
+      "max_team_games": 34,
+      "matches": 306,
+      "ordered_pair_count": 306,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Belgium Jupiler League",
+      "league_id": 1,
+      "season": "2009/2010",
+      "teams": 15,
+      "min_team_games": 28,
+      "max_team_games": 28,
+      "matches": 210,
+      "ordered_pair_count": 210,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Belgium Jupiler League",
+      "league_id": 1,
+      "season": "2010/2011",
+      "teams": 16,
+      "min_team_games": 30,
+      "max_team_games": 30,
+      "matches": 240,
+      "ordered_pair_count": 240,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Belgium Jupiler League",
+      "league_id": 1,
+      "season": "2011/2012",
+      "teams": 16,
+      "min_team_games": 30,
+      "max_team_games": 30,
+      "matches": 240,
+      "ordered_pair_count": 240,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Belgium Jupiler League",
+      "league_id": 1,
+      "season": "2012/2013",
+      "teams": 16,
+      "min_team_games": 30,
+      "max_team_games": 30,
+      "matches": 240,
+      "ordered_pair_count": 240,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Belgium Jupiler League",
+      "league_id": 1,
+      "season": "2013/2014",
+      "teams": 4,
+      "min_team_games": 6,
+      "max_team_games": 6,
+      "matches": 12,
+      "ordered_pair_count": 12,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Belgium Jupiler League",
+      "league_id": 1,
+      "season": "2014/2015",
+      "teams": 16,
+      "min_team_games": 30,
+      "max_team_games": 30,
+      "matches": 240,
+      "ordered_pair_count": 240,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Belgium Jupiler League",
+      "league_id": 1,
+      "season": "2015/2016",
+      "teams": 16,
+      "min_team_games": 30,
+      "max_team_games": 30,
+      "matches": 240,
+      "ordered_pair_count": 240,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "England Premier League",
+      "league_id": 1729,
+      "season": "2008/2009",
+      "teams": 20,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 380,
+      "ordered_pair_count": 380,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "England Premier League",
+      "league_id": 1729,
+      "season": "2009/2010",
+      "teams": 20,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 380,
+      "ordered_pair_count": 380,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "England Premier League",
+      "league_id": 1729,
+      "season": "2010/2011",
+      "teams": 20,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 380,
+      "ordered_pair_count": 380,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "England Premier League",
+      "league_id": 1729,
+      "season": "2011/2012",
+      "teams": 20,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 380,
+      "ordered_pair_count": 380,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "England Premier League",
+      "league_id": 1729,
+      "season": "2012/2013",
+      "teams": 20,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 380,
+      "ordered_pair_count": 380,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "England Premier League",
+      "league_id": 1729,
+      "season": "2013/2014",
+      "teams": 20,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 380,
+      "ordered_pair_count": 380,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "England Premier League",
+      "league_id": 1729,
+      "season": "2014/2015",
+      "teams": 20,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 380,
+      "ordered_pair_count": 380,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "England Premier League",
+      "league_id": 1729,
+      "season": "2015/2016",
+      "teams": 20,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 380,
+      "ordered_pair_count": 380,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "France Ligue 1",
+      "league_id": 4769,
+      "season": "2008/2009",
+      "teams": 20,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 380,
+      "ordered_pair_count": 380,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "France Ligue 1",
+      "league_id": 4769,
+      "season": "2009/2010",
+      "teams": 20,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 380,
+      "ordered_pair_count": 380,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "France Ligue 1",
+      "league_id": 4769,
+      "season": "2010/2011",
+      "teams": 20,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 380,
+      "ordered_pair_count": 380,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "France Ligue 1",
+      "league_id": 4769,
+      "season": "2011/2012",
+      "teams": 20,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 380,
+      "ordered_pair_count": 380,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "France Ligue 1",
+      "league_id": 4769,
+      "season": "2012/2013",
+      "teams": 20,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 380,
+      "ordered_pair_count": 380,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "France Ligue 1",
+      "league_id": 4769,
+      "season": "2013/2014",
+      "teams": 20,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 380,
+      "ordered_pair_count": 380,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "France Ligue 1",
+      "league_id": 4769,
+      "season": "2014/2015",
+      "teams": 20,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 380,
+      "ordered_pair_count": 380,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "France Ligue 1",
+      "league_id": 4769,
+      "season": "2015/2016",
+      "teams": 20,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 380,
+      "ordered_pair_count": 380,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Germany 1. Bundesliga",
+      "league_id": 7809,
+      "season": "2008/2009",
+      "teams": 18,
+      "min_team_games": 34,
+      "max_team_games": 34,
+      "matches": 306,
+      "ordered_pair_count": 306,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Germany 1. Bundesliga",
+      "league_id": 7809,
+      "season": "2009/2010",
+      "teams": 18,
+      "min_team_games": 34,
+      "max_team_games": 34,
+      "matches": 306,
+      "ordered_pair_count": 306,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Germany 1. Bundesliga",
+      "league_id": 7809,
+      "season": "2010/2011",
+      "teams": 18,
+      "min_team_games": 34,
+      "max_team_games": 34,
+      "matches": 306,
+      "ordered_pair_count": 306,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Germany 1. Bundesliga",
+      "league_id": 7809,
+      "season": "2011/2012",
+      "teams": 18,
+      "min_team_games": 34,
+      "max_team_games": 34,
+      "matches": 306,
+      "ordered_pair_count": 306,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Germany 1. Bundesliga",
+      "league_id": 7809,
+      "season": "2012/2013",
+      "teams": 18,
+      "min_team_games": 34,
+      "max_team_games": 34,
+      "matches": 306,
+      "ordered_pair_count": 306,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Germany 1. Bundesliga",
+      "league_id": 7809,
+      "season": "2013/2014",
+      "teams": 18,
+      "min_team_games": 34,
+      "max_team_games": 34,
+      "matches": 306,
+      "ordered_pair_count": 306,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Germany 1. Bundesliga",
+      "league_id": 7809,
+      "season": "2014/2015",
+      "teams": 18,
+      "min_team_games": 34,
+      "max_team_games": 34,
+      "matches": 306,
+      "ordered_pair_count": 306,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Germany 1. Bundesliga",
+      "league_id": 7809,
+      "season": "2015/2016",
+      "teams": 18,
+      "min_team_games": 34,
+      "max_team_games": 34,
+      "matches": 306,
+      "ordered_pair_count": 306,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Italy Serie A",
+      "league_id": 10257,
+      "season": "2008/2009",
+      "teams": 20,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 380,
+      "ordered_pair_count": 380,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Italy Serie A",
+      "league_id": 10257,
+      "season": "2009/2010",
+      "teams": 20,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 380,
+      "ordered_pair_count": 380,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Italy Serie A",
+      "league_id": 10257,
+      "season": "2010/2011",
+      "teams": 20,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 380,
+      "ordered_pair_count": 380,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Italy Serie A",
+      "league_id": 10257,
+      "season": "2011/2012",
+      "teams": 20,
+      "min_team_games": 34,
+      "max_team_games": 38,
+      "matches": 358,
+      "ordered_pair_count": 358,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 0
+    },
+    {
+      "league": "Italy Serie A",
+      "league_id": 10257,
+      "season": "2012/2013",
+      "teams": 20,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 380,
+      "ordered_pair_count": 380,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Italy Serie A",
+      "league_id": 10257,
+      "season": "2013/2014",
+      "teams": 20,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 380,
+      "ordered_pair_count": 380,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Italy Serie A",
+      "league_id": 10257,
+      "season": "2014/2015",
+      "teams": 20,
+      "min_team_games": 37,
+      "max_team_games": 38,
+      "matches": 379,
+      "ordered_pair_count": 379,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 0
+    },
+    {
+      "league": "Italy Serie A",
+      "league_id": 10257,
+      "season": "2015/2016",
+      "teams": 20,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 380,
+      "ordered_pair_count": 380,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Netherlands Eredivisie",
+      "league_id": 13274,
+      "season": "2008/2009",
+      "teams": 18,
+      "min_team_games": 34,
+      "max_team_games": 34,
+      "matches": 306,
+      "ordered_pair_count": 306,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Netherlands Eredivisie",
+      "league_id": 13274,
+      "season": "2009/2010",
+      "teams": 18,
+      "min_team_games": 34,
+      "max_team_games": 34,
+      "matches": 306,
+      "ordered_pair_count": 306,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Netherlands Eredivisie",
+      "league_id": 13274,
+      "season": "2010/2011",
+      "teams": 18,
+      "min_team_games": 34,
+      "max_team_games": 34,
+      "matches": 306,
+      "ordered_pair_count": 306,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Netherlands Eredivisie",
+      "league_id": 13274,
+      "season": "2011/2012",
+      "teams": 18,
+      "min_team_games": 34,
+      "max_team_games": 34,
+      "matches": 306,
+      "ordered_pair_count": 306,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Netherlands Eredivisie",
+      "league_id": 13274,
+      "season": "2012/2013",
+      "teams": 18,
+      "min_team_games": 34,
+      "max_team_games": 34,
+      "matches": 306,
+      "ordered_pair_count": 306,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Netherlands Eredivisie",
+      "league_id": 13274,
+      "season": "2013/2014",
+      "teams": 18,
+      "min_team_games": 34,
+      "max_team_games": 34,
+      "matches": 306,
+      "ordered_pair_count": 306,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Netherlands Eredivisie",
+      "league_id": 13274,
+      "season": "2014/2015",
+      "teams": 18,
+      "min_team_games": 34,
+      "max_team_games": 34,
+      "matches": 306,
+      "ordered_pair_count": 306,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Netherlands Eredivisie",
+      "league_id": 13274,
+      "season": "2015/2016",
+      "teams": 18,
+      "min_team_games": 34,
+      "max_team_games": 34,
+      "matches": 306,
+      "ordered_pair_count": 306,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Poland Ekstraklasa",
+      "league_id": 15722,
+      "season": "2008/2009",
+      "teams": 16,
+      "min_team_games": 30,
+      "max_team_games": 30,
+      "matches": 240,
+      "ordered_pair_count": 240,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Poland Ekstraklasa",
+      "league_id": 15722,
+      "season": "2009/2010",
+      "teams": 16,
+      "min_team_games": 30,
+      "max_team_games": 30,
+      "matches": 240,
+      "ordered_pair_count": 240,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Poland Ekstraklasa",
+      "league_id": 15722,
+      "season": "2010/2011",
+      "teams": 16,
+      "min_team_games": 30,
+      "max_team_games": 30,
+      "matches": 240,
+      "ordered_pair_count": 240,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Poland Ekstraklasa",
+      "league_id": 15722,
+      "season": "2011/2012",
+      "teams": 16,
+      "min_team_games": 30,
+      "max_team_games": 30,
+      "matches": 240,
+      "ordered_pair_count": 240,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Poland Ekstraklasa",
+      "league_id": 15722,
+      "season": "2012/2013",
+      "teams": 16,
+      "min_team_games": 30,
+      "max_team_games": 30,
+      "matches": 240,
+      "ordered_pair_count": 240,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Poland Ekstraklasa",
+      "league_id": 15722,
+      "season": "2013/2014",
+      "teams": 16,
+      "min_team_games": 30,
+      "max_team_games": 30,
+      "matches": 240,
+      "ordered_pair_count": 240,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Poland Ekstraklasa",
+      "league_id": 15722,
+      "season": "2014/2015",
+      "teams": 16,
+      "min_team_games": 30,
+      "max_team_games": 30,
+      "matches": 240,
+      "ordered_pair_count": 240,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Poland Ekstraklasa",
+      "league_id": 15722,
+      "season": "2015/2016",
+      "teams": 16,
+      "min_team_games": 30,
+      "max_team_games": 30,
+      "matches": 240,
+      "ordered_pair_count": 240,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Portugal Liga ZON Sagres",
+      "league_id": 17642,
+      "season": "2008/2009",
+      "teams": 16,
+      "min_team_games": 30,
+      "max_team_games": 30,
+      "matches": 240,
+      "ordered_pair_count": 240,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Portugal Liga ZON Sagres",
+      "league_id": 17642,
+      "season": "2009/2010",
+      "teams": 16,
+      "min_team_games": 30,
+      "max_team_games": 30,
+      "matches": 240,
+      "ordered_pair_count": 240,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Portugal Liga ZON Sagres",
+      "league_id": 17642,
+      "season": "2010/2011",
+      "teams": 16,
+      "min_team_games": 30,
+      "max_team_games": 30,
+      "matches": 240,
+      "ordered_pair_count": 240,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Portugal Liga ZON Sagres",
+      "league_id": 17642,
+      "season": "2011/2012",
+      "teams": 16,
+      "min_team_games": 30,
+      "max_team_games": 30,
+      "matches": 240,
+      "ordered_pair_count": 240,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Portugal Liga ZON Sagres",
+      "league_id": 17642,
+      "season": "2012/2013",
+      "teams": 16,
+      "min_team_games": 30,
+      "max_team_games": 30,
+      "matches": 240,
+      "ordered_pair_count": 240,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Portugal Liga ZON Sagres",
+      "league_id": 17642,
+      "season": "2013/2014",
+      "teams": 16,
+      "min_team_games": 30,
+      "max_team_games": 30,
+      "matches": 240,
+      "ordered_pair_count": 240,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Portugal Liga ZON Sagres",
+      "league_id": 17642,
+      "season": "2014/2015",
+      "teams": 18,
+      "min_team_games": 34,
+      "max_team_games": 34,
+      "matches": 306,
+      "ordered_pair_count": 306,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Portugal Liga ZON Sagres",
+      "league_id": 17642,
+      "season": "2015/2016",
+      "teams": 18,
+      "min_team_games": 34,
+      "max_team_games": 34,
+      "matches": 306,
+      "ordered_pair_count": 306,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Scotland Premier League",
+      "league_id": 19694,
+      "season": "2008/2009",
+      "teams": 12,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 228,
+      "ordered_pair_count": 132,
+      "min_pair_rows": 1,
+      "max_pair_rows": 3,
+      "observed_double_round_robin": 0
+    },
+    {
+      "league": "Scotland Premier League",
+      "league_id": 19694,
+      "season": "2009/2010",
+      "teams": 12,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 228,
+      "ordered_pair_count": 132,
+      "min_pair_rows": 1,
+      "max_pair_rows": 3,
+      "observed_double_round_robin": 0
+    },
+    {
+      "league": "Scotland Premier League",
+      "league_id": 19694,
+      "season": "2010/2011",
+      "teams": 12,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 228,
+      "ordered_pair_count": 132,
+      "min_pair_rows": 1,
+      "max_pair_rows": 3,
+      "observed_double_round_robin": 0
+    },
+    {
+      "league": "Scotland Premier League",
+      "league_id": 19694,
+      "season": "2011/2012",
+      "teams": 12,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 228,
+      "ordered_pair_count": 132,
+      "min_pair_rows": 1,
+      "max_pair_rows": 3,
+      "observed_double_round_robin": 0
+    },
+    {
+      "league": "Scotland Premier League",
+      "league_id": 19694,
+      "season": "2012/2013",
+      "teams": 12,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 228,
+      "ordered_pair_count": 132,
+      "min_pair_rows": 1,
+      "max_pair_rows": 3,
+      "observed_double_round_robin": 0
+    },
+    {
+      "league": "Scotland Premier League",
+      "league_id": 19694,
+      "season": "2013/2014",
+      "teams": 12,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 228,
+      "ordered_pair_count": 132,
+      "min_pair_rows": 1,
+      "max_pair_rows": 3,
+      "observed_double_round_robin": 0
+    },
+    {
+      "league": "Scotland Premier League",
+      "league_id": 19694,
+      "season": "2014/2015",
+      "teams": 12,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 228,
+      "ordered_pair_count": 132,
+      "min_pair_rows": 1,
+      "max_pair_rows": 3,
+      "observed_double_round_robin": 0
+    },
+    {
+      "league": "Scotland Premier League",
+      "league_id": 19694,
+      "season": "2015/2016",
+      "teams": 12,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 228,
+      "ordered_pair_count": 132,
+      "min_pair_rows": 1,
+      "max_pair_rows": 3,
+      "observed_double_round_robin": 0
+    },
+    {
+      "league": "Spain LIGA BBVA",
+      "league_id": 21518,
+      "season": "2008/2009",
+      "teams": 20,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 380,
+      "ordered_pair_count": 380,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Spain LIGA BBVA",
+      "league_id": 21518,
+      "season": "2009/2010",
+      "teams": 20,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 380,
+      "ordered_pair_count": 380,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Spain LIGA BBVA",
+      "league_id": 21518,
+      "season": "2010/2011",
+      "teams": 20,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 380,
+      "ordered_pair_count": 380,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Spain LIGA BBVA",
+      "league_id": 21518,
+      "season": "2011/2012",
+      "teams": 20,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 380,
+      "ordered_pair_count": 380,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Spain LIGA BBVA",
+      "league_id": 21518,
+      "season": "2012/2013",
+      "teams": 20,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 380,
+      "ordered_pair_count": 380,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Spain LIGA BBVA",
+      "league_id": 21518,
+      "season": "2013/2014",
+      "teams": 20,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 380,
+      "ordered_pair_count": 380,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Spain LIGA BBVA",
+      "league_id": 21518,
+      "season": "2014/2015",
+      "teams": 20,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 380,
+      "ordered_pair_count": 380,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Spain LIGA BBVA",
+      "league_id": 21518,
+      "season": "2015/2016",
+      "teams": 20,
+      "min_team_games": 38,
+      "max_team_games": 38,
+      "matches": 380,
+      "ordered_pair_count": 380,
+      "min_pair_rows": 1,
+      "max_pair_rows": 1,
+      "observed_double_round_robin": 1
+    },
+    {
+      "league": "Switzerland Super League",
+      "league_id": 24558,
+      "season": "2008/2009",
+      "teams": 10,
+      "min_team_games": 36,
+      "max_team_games": 36,
+      "matches": 180,
+      "ordered_pair_count": 90,
+      "min_pair_rows": 2,
+      "max_pair_rows": 2,
+      "observed_double_round_robin": 0
+    },
+    {
+      "league": "Switzerland Super League",
+      "league_id": 24558,
+      "season": "2009/2010",
+      "teams": 10,
+      "min_team_games": 36,
+      "max_team_games": 36,
+      "matches": 180,
+      "ordered_pair_count": 90,
+      "min_pair_rows": 2,
+      "max_pair_rows": 2,
+      "observed_double_round_robin": 0
+    },
+    {
+      "league": "Switzerland Super League",
+      "league_id": 24558,
+      "season": "2010/2011",
+      "teams": 10,
+      "min_team_games": 36,
+      "max_team_games": 36,
+      "matches": 180,
+      "ordered_pair_count": 90,
+      "min_pair_rows": 2,
+      "max_pair_rows": 2,
+      "observed_double_round_robin": 0
+    },
+    {
+      "league": "Switzerland Super League",
+      "league_id": 24558,
+      "season": "2011/2012",
+      "teams": 10,
+      "min_team_games": 18,
+      "max_team_games": 34,
+      "matches": 162,
+      "ordered_pair_count": 90,
+      "min_pair_rows": 1,
+      "max_pair_rows": 2,
+      "observed_double_round_robin": 0
+    },
+    {
+      "league": "Switzerland Super League",
+      "league_id": 24558,
+      "season": "2012/2013",
+      "teams": 10,
+      "min_team_games": 36,
+      "max_team_games": 36,
+      "matches": 180,
+      "ordered_pair_count": 90,
+      "min_pair_rows": 2,
+      "max_pair_rows": 2,
+      "observed_double_round_robin": 0
+    },
+    {
+      "league": "Switzerland Super League",
+      "league_id": 24558,
+      "season": "2013/2014",
+      "teams": 10,
+      "min_team_games": 36,
+      "max_team_games": 36,
+      "matches": 180,
+      "ordered_pair_count": 90,
+      "min_pair_rows": 2,
+      "max_pair_rows": 2,
+      "observed_double_round_robin": 0
+    },
+    {
+      "league": "Switzerland Super League",
+      "league_id": 24558,
+      "season": "2014/2015",
+      "teams": 10,
+      "min_team_games": 36,
+      "max_team_games": 36,
+      "matches": 180,
+      "ordered_pair_count": 90,
+      "min_pair_rows": 2,
+      "max_pair_rows": 2,
+      "observed_double_round_robin": 0
+    },
+    {
+      "league": "Switzerland Super League",
+      "league_id": 24558,
+      "season": "2015/2016",
+      "teams": 10,
+      "min_team_games": 36,
+      "max_team_games": 36,
+      "matches": 180,
+      "ordered_pair_count": 90,
+      "min_pair_rows": 2,
+      "max_pair_rows": 2,
+      "observed_double_round_robin": 0
+    }
+  ],
+  "join_checks": {
+    "joined_match_rows": 25979,
+    "distinct_matches": 25979
+  },
+  "teams_without_attributes": [
+    {
+      "team_api_id": 10213,
+      "team_long_name": "Amadora"
+    },
+    {
+      "team_api_id": 6601,
+      "team_long_name": "FC Volendam"
+    },
+    {
+      "team_api_id": 7947,
+      "team_long_name": "FCV Dender EH"
+    },
+    {
+      "team_api_id": 4064,
+      "team_long_name": "Feirense"
+    },
+    {
+      "team_api_id": 7896,
+      "team_long_name": "Lugano"
+    },
+    {
+      "team_api_id": 9765,
+      "team_long_name": "Portimonense"
+    },
+    {
+      "team_api_id": 177361,
+      "team_long_name": "Termalica Bruk-Bet Nieciecza"
+    },
+    {
+      "team_api_id": 188163,
+      "team_long_name": "Tondela"
+    },
+    {
+      "team_api_id": 7992,
+      "team_long_name": "Trofense"
+    },
+    {
+      "team_api_id": 4049,
+      "team_long_name": "Tubize"
+    },
+    {
+      "team_api_id": 6367,
+      "team_long_name": "Uniao da Madeira"
+    }
+  ]
+}

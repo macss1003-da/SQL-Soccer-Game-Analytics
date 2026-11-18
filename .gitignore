@@ -1,0 +1,33 @@
+# Raw databases stay local.
+data/*
+!data/README.md
+*.sqlite
+*.sqlite3
+*.db
+*.sqlite.zip
+*.sqlite3.zip
+*.db.zip
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Local runtime files.
+__pycache__/
+*.pyc
+.venv/
+.env
+.DS_Store
+Thumbs.db
+
+# Power BI: keep PBIP/PBIR/model definitions; exclude local caches and binary exports.
+**/.pbi/cache.abf
+**/.pbi/localSettings.json
+**/.pbi/unappliedChanges.json
+*.pbix
+*.pbit
+
+# Download/distribution archives are not the repository source.
+*.zip

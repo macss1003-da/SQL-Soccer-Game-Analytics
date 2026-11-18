@@ -1,0 +1,13 @@
+﻿check_name,actual,expected,passed
+all raw matches retained,25979,25979,1
+team-season played reconciles,51958,51958,1
+team-season goals for reconciles,70287,70287,1
+league-season matches reconciles,25979,25979,1
+league-season goals reconciles,70287,70287,1
+invalid team-season totals,0,0,1
+invalid PPG or venue denominator,0,0,1
+duplicate team-season keys,0,0,1
+nonconsecutive changes,0,0,1
+duplicate season labels per start year,0,0,1
+each league-season has a PPG leader,88,88,1
+stable sample ordered-pair structure failures,0,0,1

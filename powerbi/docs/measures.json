@@ -1,0 +1,268 @@
+[
+  {
+    "name": "Matches",
+    "expression": "SUM ( 'FactLeagueSeason'[matches] )",
+    "formatString": "#,0",
+    "displayFolder": "01 Tổng quan"
+  },
+  {
+    "name": "Goals",
+    "expression": "SUM ( 'FactLeagueSeason'[total_goals] )",
+    "formatString": "#,0",
+    "displayFolder": "01 Tổng quan"
+  },
+  {
+    "name": "Home Goals",
+    "expression": "SUM ( 'FactLeagueSeason'[home_goals] )",
+    "formatString": "#,0",
+    "displayFolder": "01 Tổng quan"
+  },
+  {
+    "name": "Away Goals",
+    "expression": "SUM ( 'FactLeagueSeason'[away_goals] )",
+    "formatString": "#,0",
+    "displayFolder": "01 Tổng quan"
+  },
+  {
+    "name": "Home Wins",
+    "expression": "SUM ( 'FactLeagueSeason'[home_wins] )",
+    "formatString": "#,0",
+    "displayFolder": "01 Tổng quan"
+  },
+  {
+    "name": "Draws",
+    "expression": "SUM ( 'FactLeagueSeason'[draws] )",
+    "formatString": "#,0",
+    "displayFolder": "01 Tổng quan"
+  },
+  {
+    "name": "Away Wins",
+    "expression": "SUM ( 'FactLeagueSeason'[away_wins] )",
+    "formatString": "#,0",
+    "displayFolder": "01 Tổng quan"
+  },
+  {
+    "name": "Goals per Match",
+    "expression": "DIVIDE ( [Goals], [Matches] )",
+    "formatString": "0.00",
+    "displayFolder": "01 Tổng quan"
+  },
+  {
+    "name": "Home Win Rate",
+    "expression": "DIVIDE ( [Home Wins], [Matches] )",
+    "formatString": "0.0%",
+    "displayFolder": "01 Tổng quan"
+  },
+  {
+    "name": "Draw Rate",
+    "expression": "DIVIDE ( [Draws], [Matches] )",
+    "formatString": "0.0%",
+    "displayFolder": "01 Tổng quan"
+  },
+  {
+    "name": "Away Win Rate",
+    "expression": "DIVIDE ( [Away Wins], [Matches] )",
+    "formatString": "0.0%",
+    "displayFolder": "01 Tổng quan"
+  },
+  {
+    "name": "Outcome Matches",
+    "expression": "SWITCH ( SELECTEDVALUE ( DimOutcome[code] ), \"H\", [Home Wins], \"D\", [Draws], \"A\", [Away Wins] )",
+    "formatString": "#,0",
+    "displayFolder": "01 Tổng quan"
+  },
+  {
+    "name": "Participating Teams",
+    "expression": "DISTINCTCOUNT ( 'FactTeamSeason'[team_api_id] )",
+    "formatString": "#,0",
+    "displayFolder": "01 Tổng quan"
+  },
+  {
+    "name": "League Seasons",
+    "expression": "COUNTROWS ( 'FactLeagueSeason' )",
+    "formatString": "#,0",
+    "displayFolder": "01 Tổng quan"
+  },
+  {
+    "name": "Team Games",
+    "expression": "SUM ( 'FactTeamSeason'[played] )",
+    "formatString": "#,0",
+    "displayFolder": "02 Đội bóng"
+  },
+  {
+    "name": "Team Points",
+    "expression": "SUM ( 'FactTeamSeason'[points] )",
+    "formatString": "#,0",
+    "displayFolder": "02 Đội bóng"
+  },
+  {
+    "name": "Team Wins",
+    "expression": "SUM ( 'FactTeamSeason'[wins] )",
+    "formatString": "#,0",
+    "displayFolder": "02 Đội bóng"
+  },
+  {
+    "name": "Team Goals For",
+    "expression": "SUM ( 'FactTeamSeason'[goals_for] )",
+    "formatString": "#,0",
+    "displayFolder": "02 Đội bóng"
+  },
+  {
+    "name": "Team Goals Against",
+    "expression": "SUM ( 'FactTeamSeason'[goals_against] )",
+    "formatString": "#,0",
+    "displayFolder": "02 Đội bóng"
+  },
+  {
+    "name": "Team Seasons",
+    "expression": "COUNTROWS ( 'FactTeamSeason' )",
+    "formatString": "#,0",
+    "displayFolder": "02 Đội bóng"
+  },
+  {
+    "name": "Team PPG",
+    "expression": "DIVIDE ( [Team Points], [Team Games] )",
+    "formatString": "0.00",
+    "displayFolder": "02 Đội bóng",
+    "description": "Weighted points per game for selected teams/seasons. Not an average of rounded PPG."
+  },
+  {
+    "name": "Team Win Rate",
+    "expression": "DIVIDE ( [Team Wins], [Team Games] )",
+    "formatString": "0.0%",
+    "displayFolder": "02 Đội bóng"
+  },
+  {
+    "name": "Home Team Games",
+    "expression": "SUM ( 'FactTeamSeason'[home_played] )",
+    "formatString": "#,0",
+    "displayFolder": "03 Sân nhà và sân khách"
+  },
+  {
+    "name": "Away Team Games",
+    "expression": "SUM ( 'FactTeamSeason'[away_played] )",
+    "formatString": "#,0",
+    "displayFolder": "03 Sân nhà và sân khách"
+  },
+  {
+    "name": "Home Team Points",
+    "expression": "SUM ( 'FactTeamSeason'[home_points] )",
+    "formatString": "#,0",
+    "displayFolder": "03 Sân nhà và sân khách"
+  },
+  {
+    "name": "Away Team Points",
+    "expression": "SUM ( 'FactTeamSeason'[away_points] )",
+    "formatString": "#,0",
+    "displayFolder": "03 Sân nhà và sân khách"
+  },
+  {
+    "name": "Home PPG",
+    "expression": "DIVIDE ( [Home Team Points], [Home Team Games] )",
+    "formatString": "0.00",
+    "displayFolder": "03 Sân nhà và sân khách"
+  },
+  {
+    "name": "Away PPG",
+    "expression": "DIVIDE ( [Away Team Points], [Away Team Games] )",
+    "formatString": "0.00",
+    "displayFolder": "03 Sân nhà và sân khách"
+  },
+  {
+    "name": "Venue PPG Gap",
+    "expression": "[Home PPG] - [Away PPG]",
+    "formatString": "+0.00;-0.00;0.00",
+    "displayFolder": "03 Sân nhà và sân khách"
+  },
+  {
+    "name": "Change Pairs",
+    "expression": "COUNTROWS ( 'FactSeasonChange' )",
+    "formatString": "#,0",
+    "displayFolder": "04 Thay đổi qua mùa"
+  },
+  {
+    "name": "Improved Pairs",
+    "expression": "COUNTROWS ( FILTER ( 'FactSeasonChange', 'FactSeasonChange'[ppg_change] > 0 ) )",
+    "formatString": "#,0",
+    "displayFolder": "04 Thay đổi qua mùa"
+  },
+  {
+    "name": "Declined Pairs",
+    "expression": "COUNTROWS ( FILTER ( 'FactSeasonChange', 'FactSeasonChange'[ppg_change] < 0 ) )",
+    "formatString": "#,0",
+    "displayFolder": "04 Thay đổi qua mùa"
+  },
+  {
+    "name": "Mean PPG Change",
+    "expression": "AVERAGE ( 'FactSeasonChange'[ppg_change] )",
+    "formatString": "+0.00;-0.00;0.00",
+    "displayFolder": "04 Thay đổi qua mùa",
+    "description": "Arithmetic mean of valid paired PPG changes, not a weighted cohort performance measure."
+  },
+  {
+    "name": "Pair PPG Change",
+    "expression": "IF ( HASONEVALUE ( 'FactSeasonChange'[PairKey] ), MAX ( 'FactSeasonChange'[ppg_change] ) )",
+    "formatString": "+0.00;-0.00;0.00",
+    "displayFolder": "04 Thay đổi qua mùa"
+  },
+  {
+    "name": "Top Team PPG",
+    "expression": "VAR Candidates = FILTER ( ADDCOLUMNS ( ALLSELECTED ( 'DimTeam'[team_label] ), \"__score\", [Team PPG] ), NOT ISBLANK ( [__score] ) )\nVAR Chosen = TOPN ( 10, Candidates, [__score], DESC, 'DimTeam'[team_label], ASC )\nRETURN IF ( CONTAINS ( Chosen, 'DimTeam'[team_label], SELECTEDVALUE ( 'DimTeam'[team_label] ) ), [Team PPG] )",
+    "formatString": "0.00",
+    "displayFolder": "90 Biểu đồ Top 10"
+  },
+  {
+    "name": "Top Home Gap",
+    "expression": "VAR Candidates = FILTER ( ADDCOLUMNS ( ALLSELECTED ( 'DimTeam'[team_label] ), \"__score\", [Venue PPG Gap] ), NOT ISBLANK ( [__score] ) && [__score] > 0 )\nVAR Chosen = TOPN ( 10, Candidates, [__score], DESC, 'DimTeam'[team_label], ASC )\nRETURN IF ( CONTAINS ( Chosen, 'DimTeam'[team_label], SELECTEDVALUE ( 'DimTeam'[team_label] ) ), [Venue PPG Gap] )",
+    "formatString": "0.00",
+    "displayFolder": "90 Biểu đồ Top 10"
+  },
+  {
+    "name": "Top Away Gap",
+    "expression": "VAR Candidates = FILTER ( ADDCOLUMNS ( ALLSELECTED ( 'DimTeam'[team_label] ), \"__score\", [Venue PPG Gap] ), NOT ISBLANK ( [__score] ) && [__score] < 0 )\nVAR Chosen = TOPN ( 10, Candidates, [__score], ASC, 'DimTeam'[team_label], ASC )\nRETURN IF ( CONTAINS ( Chosen, 'DimTeam'[team_label], SELECTEDVALUE ( 'DimTeam'[team_label] ) ), [Venue PPG Gap] )",
+    "formatString": "0.00",
+    "displayFolder": "90 Biểu đồ Top 10"
+  },
+  {
+    "name": "Top Improvements",
+    "expression": "VAR Candidates = FILTER ( ADDCOLUMNS ( ALLSELECTED ( 'FactSeasonChange'[PairLabel] ), \"__score\", [Pair PPG Change] ), NOT ISBLANK ( [__score] ) && [__score] > 0 )\nVAR Chosen = TOPN ( 10, Candidates, [__score], DESC, 'FactSeasonChange'[PairLabel], ASC )\nRETURN IF ( CONTAINS ( Chosen, 'FactSeasonChange'[PairLabel], SELECTEDVALUE ( 'FactSeasonChange'[PairLabel] ) ), [Pair PPG Change] )",
+    "formatString": "0.00",
+    "displayFolder": "90 Biểu đồ Top 10"
+  },
+  {
+    "name": "Top Declines",
+    "expression": "VAR Candidates = FILTER ( ADDCOLUMNS ( ALLSELECTED ( 'FactSeasonChange'[PairLabel] ), \"__score\", [Pair PPG Change] ), NOT ISBLANK ( [__score] ) && [__score] < 0 )\nVAR Chosen = TOPN ( 10, Candidates, [__score], ASC, 'FactSeasonChange'[PairLabel], ASC )\nRETURN IF ( CONTAINS ( Chosen, 'FactSeasonChange'[PairLabel], SELECTEDVALUE ( 'FactSeasonChange'[PairLabel] ) ), [Pair PPG Change] )",
+    "formatString": "0.00",
+    "displayFolder": "90 Biểu đồ Top 10"
+  },
+  {
+    "name": "Checks Passed",
+    "expression": "COUNTROWS ( FILTER ( DataChecks, DataChecks[passed] = 1 ) )",
+    "formatString": "#,0",
+    "displayFolder": "05 Kiểm tra"
+  },
+  {
+    "name": "Checks Failed",
+    "expression": "COALESCE ( COUNTROWS ( FILTER ( DataChecks, DataChecks[passed] <> 1 ) ), 0 )",
+    "formatString": "#,0",
+    "displayFolder": "05 Kiểm tra"
+  },
+  {
+    "name": "Source Result Tables",
+    "expression": "COUNTROWS ( ResultCatalog )",
+    "formatString": "#,0",
+    "displayFolder": "05 Kiểm tra"
+  },
+  {
+    "name": "SQL Statements",
+    "expression": "MAX ( RunInfo[sql_statements] )",
+    "formatString": "#,0",
+    "displayFolder": "05 Kiểm tra"
+  },
+  {
+    "name": "Notable Warnings",
+    "expression": "COUNTROWS ( CoverageWarnings )",
+    "formatString": "#,0",
+    "displayFolder": "05 Kiểm tra"
+  }
+]

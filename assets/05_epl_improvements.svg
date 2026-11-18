@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="864pt" height="525.6pt" viewBox="0 0 864 525.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-24T16:26:50.801312</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 525.6 
+L 864 525.6 
+L 864 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 371.52 441.504 
+L 829.44 441.504 
+L 829.44 120.888 
+L 371.52 120.888 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 371.52 441.504 
+L 371.52 120.888 
+" clip-path="url(#pdb5904e168)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.18; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="m246b3dc74f" d="M 0 0 
+L 0 3.5 
+" style="stroke: #334155; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m246b3dc74f" x="371.52" y="441.504" style="fill: #334155; stroke: #334155; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #334155" x="371.52" y="456.862281" transform="rotate(-0 371.52 456.862281)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 468.949787 441.504 
+L 468.949787 120.888 
+" clip-path="url(#pdb5904e168)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.18; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m246b3dc74f" x="468.949787" y="441.504" style="fill: #334155; stroke: #334155; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #334155" x="468.949787" y="456.862281" transform="rotate(-0 468.949787 456.862281)">10</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 566.379574 441.504 
+L 566.379574 120.888 
+" clip-path="url(#pdb5904e168)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.18; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m246b3dc74f" x="566.379574" y="441.504" style="fill: #334155; stroke: #334155; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #334155" x="566.379574" y="456.862281" transform="rotate(-0 566.379574 456.862281)">20</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 663.809362 441.504 
+L 663.809362 120.888 
+" clip-path="url(#pdb5904e168)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.18; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m246b3dc74f" x="663.809362" y="441.504" style="fill: #334155; stroke: #334155; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #334155" x="663.809362" y="456.862281" transform="rotate(-0 663.809362 456.862281)">30</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 761.239149 441.504 
+L 761.239149 120.888 
+" clip-path="url(#pdb5904e168)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.18; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m246b3dc74f" x="761.239149" y="441.504" style="fill: #334155; stroke: #334155; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #334155" x="761.239149" y="456.862281" transform="rotate(-0 761.239149 456.862281)">40</text>
+     </g>
+    </g>
+    <g id="text_6">
+     <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #334155" x="600.48" y="471.508219" transform="rotate(-0 600.48 471.508219)">Increase in reconstructed points</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_11">
+      <defs>
+       <path id="ma9595efbd0" d="M 0 0 
+L -3.5 0 
+" style="stroke: #334155; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#ma9595efbd0" x="371.52" y="145.136777" style="fill: #334155; stroke: #334155; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #334155" x="364.52" y="149.315918" transform="rotate(-0 364.52 149.315918)">Leicester City  2014/15 → 2015/16</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#ma9595efbd0" x="371.52" y="175.37216" style="fill: #334155; stroke: #334155; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #334155" x="364.52" y="179.551301" transform="rotate(-0 364.52 179.551301)">Liverpool  2012/13 → 2013/14</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#ma9595efbd0" x="371.52" y="205.607543" style="fill: #334155; stroke: #334155; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #334155" x="364.52" y="209.786683" transform="rotate(-0 364.52 209.786683)">Tottenham Hotspur  2008/09 → 2009/10</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#ma9595efbd0" x="371.52" y="235.842926" style="fill: #334155; stroke: #334155; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #334155" x="364.52" y="240.022066" transform="rotate(-0 364.52 240.022066)">Newcastle United  2010/11 → 2011/12</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#ma9595efbd0" x="371.52" y="266.078309" style="fill: #334155; stroke: #334155; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #334155" x="364.52" y="270.257449" transform="rotate(-0 364.52 270.257449)">Manchester City  2010/11 → 2011/12</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#ma9595efbd0" x="371.52" y="296.313691" style="fill: #334155; stroke: #334155; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #334155" x="364.52" y="300.492832" transform="rotate(-0 364.52 300.492832)">Manchester City  2008/09 → 2009/10</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_17">
+      <g>
+       <use xlink:href="#ma9595efbd0" x="371.52" y="326.549074" style="fill: #334155; stroke: #334155; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #334155" x="364.52" y="330.728215" transform="rotate(-0 364.52 330.728215)">Southampton  2012/13 → 2013/14</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#ma9595efbd0" x="371.52" y="356.784457" style="fill: #334155; stroke: #334155; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #334155" x="364.52" y="360.963598" transform="rotate(-0 364.52 360.963598)">West Ham United  2014/15 → 2015/16</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_19">
+      <g>
+       <use xlink:href="#ma9595efbd0" x="371.52" y="387.01984" style="fill: #334155; stroke: #334155; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_15">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #334155" x="364.52" y="391.198981" transform="rotate(-0 364.52 391.198981)">Swansea City  2013/14 → 2014/15</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#ma9595efbd0" x="371.52" y="417.255223" style="fill: #334155; stroke: #334155; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_16">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #334155" x="364.52" y="421.434364" transform="rotate(-0 364.52 421.434364)">Chelsea  2011/12 → 2012/13</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 371.52 135.461455 
+L 761.239149 135.461455 
+L 761.239149 154.8121 
+L 371.52 154.8121 
+z
+" clip-path="url(#pdb5904e168)" style="fill: #07867f"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 371.52 165.696837 
+L 595.608511 165.696837 
+L 595.608511 185.047482 
+L 371.52 185.047482 
+z
+" clip-path="url(#pdb5904e168)" style="fill: #315da8"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 371.52 195.93222 
+L 556.636596 195.93222 
+L 556.636596 215.282865 
+L 371.52 215.282865 
+z
+" clip-path="url(#pdb5904e168)" style="fill: #315da8"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 371.52 226.167603 
+L 556.636596 226.167603 
+L 556.636596 245.518248 
+L 371.52 245.518248 
+z
+" clip-path="url(#pdb5904e168)" style="fill: #315da8"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 371.52 256.402986 
+L 546.893617 256.402986 
+L 546.893617 275.753631 
+L 371.52 275.753631 
+z
+" clip-path="url(#pdb5904e168)" style="fill: #315da8"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 371.52 286.638369 
+L 537.150638 286.638369 
+L 537.150638 305.989014 
+L 371.52 305.989014 
+z
+" clip-path="url(#pdb5904e168)" style="fill: #315da8"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 371.52 316.873752 
+L 517.664681 316.873752 
+L 517.664681 336.224397 
+L 371.52 336.224397 
+z
+" clip-path="url(#pdb5904e168)" style="fill: #315da8"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 371.52 347.109135 
+L 517.664681 347.109135 
+L 517.664681 366.45978 
+L 371.52 366.45978 
+z
+" clip-path="url(#pdb5904e168)" style="fill: #315da8"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 371.52 377.344518 
+L 507.921702 377.344518 
+L 507.921702 396.695163 
+L 371.52 396.695163 
+z
+" clip-path="url(#pdb5904e168)" style="fill: #315da8"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 371.52 407.5799 
+L 478.692766 407.5799 
+L 478.692766 426.930545 
+L 371.52 426.930545 
+z
+" clip-path="url(#pdb5904e168)" style="fill: #315da8"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 371.52 441.504 
+L 371.52 120.888 
+" style="fill: none; stroke: #cbd5e1; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 371.52 441.504 
+L 829.44 441.504 
+" style="fill: none; stroke: #cbd5e1; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #172033" x="768.239149" y="148.17209" transform="rotate(-0 768.239149 148.17209)">+40</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #172033" x="602.608511" y="178.407472" transform="rotate(-0 602.608511 178.407472)">+23</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #172033" x="563.636596" y="208.642855" transform="rotate(-0 563.636596 208.642855)">+19</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #172033" x="563.636596" y="238.878238" transform="rotate(-0 563.636596 238.878238)">+19</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #172033" x="553.893617" y="269.113621" transform="rotate(-0 553.893617 269.113621)">+18</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #172033" x="544.150638" y="299.349004" transform="rotate(-0 544.150638 299.349004)">+17</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #172033" x="524.664681" y="329.584387" transform="rotate(-0 524.664681 329.584387)">+15</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #172033" x="524.664681" y="359.81977" transform="rotate(-0 524.664681 359.81977)">+15</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #172033" x="514.921702" y="390.055153" transform="rotate(-0 514.921702 390.055153)">+14</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #172033" x="485.692766" y="420.290535" transform="rotate(-0 485.692766 420.290535)">+11</text>
+   </g>
+  </g>
+  <g id="text_27">
+   <text style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #172033" x="51.84" y="45.213188" transform="rotate(-0 51.84 45.213188)">Leicester had the largest adjacent-season EPL improvement</text>
+  </g>
+  <g id="text_28">
+   <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #64748b" x="51.84" y="81.942281" transform="rotate(-0 51.84 81.942281)">Top 10 of 119 comparisons. Same team and league, consecutive seasons, 38 games in each.</text>
+  </g>
+  <g id="text_29">
+   <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #64748b" x="51.84" y="505.081969" transform="rotate(-0 51.84 505.081969)">Source: SQL 12, premier_league_improvements. Leicester rose from 41 to 81 points (+1.053 PPG).</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pdb5904e168">
+   <rect x="371.52" y="120.888" width="457.92" height="320.616"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -1,0 +1,68 @@
+{
+  "markdown_relative_links_checked": 70,
+  "broken_links": [],
+  "sql_html_powerbi_result_sets_equal": true,
+  "result_tables": 38,
+  "sql_script_count": 14,
+  "ignored_files_verified": {
+    "data/database.sqlite": {
+      "ignored": true,
+      "expected": true,
+      "passed": true
+    },
+    "data/README.md": {
+      "ignored": false,
+      "expected": false,
+      "passed": true
+    },
+    "docs/index.html": {
+      "ignored": false,
+      "expected": false,
+      "passed": true
+    },
+    "outputs/results/overview.csv": {
+      "ignored": false,
+      "expected": false,
+      "passed": true
+    },
+    "outputs/SOCCER_RESULTS.xlsx": {
+      "ignored": false,
+      "expected": false,
+      "passed": true
+    },
+    "powerbi/SoccerAnalytics.pbip": {
+      "ignored": false,
+      "expected": false,
+      "passed": true
+    },
+    "powerbi/data/all_results.json": {
+      "ignored": false,
+      "expected": false,
+      "passed": true
+    },
+    "powerbi/SoccerAnalytics.SemanticModel/model.bim": {
+      "ignored": false,
+      "expected": false,
+      "passed": true
+    },
+    "powerbi/SoccerAnalytics.SemanticModel/.pbi/cache.abf": {
+      "ignored": true,
+      "expected": true,
+      "passed": true
+    },
+    "powerbi/report.pbix": {
+      "ignored": true,
+      "expected": true,
+      "passed": true
+    }
+  },
+  "all_files_under_25_MiB": true,
+  "raw_database_included": false,
+  "native_powerbi_desktop_tested": false,
+  "github_repository_created_or_published": false,
+  "github_pages_published": false,
+  "source_bundle_hashes_checked": {
+    "sql": 90,
+    "powerbi": 100
+  }
+}

@@ -1,0 +1,11 @@
+﻿check_name,actual,expected,passed
+unique accepted match ids,25979,25979,1
+two team rows per accepted match,51958,51958,1
+team goals for equal match goals,70287,70287,1
+team goals against equal match goals,70287,70287,1
+match result categories exhaust matches,25979,25979,1
+wins equal losses,19383,19383,1
+team results exhaust team rows,51958,51958,1
+team draws equal twice match draws,13192,13192,1
+points reconcile with match outcomes,71341,71341,1
+each match has two distinct teams,25979,25979,1

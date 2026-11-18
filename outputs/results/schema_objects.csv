@@ -1,0 +1,8 @@
+﻿object_name,object_type
+Country,table
+League,table
+Match,table
+Player,table
+Player_Attributes,table
+Team,table
+Team_Attributes,table

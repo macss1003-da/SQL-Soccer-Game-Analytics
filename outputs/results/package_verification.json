@@ -1,0 +1,11 @@
+{
+  "combined_sql_statements": 52,
+  "combined_sql_outputs_matched": 38,
+  "temporary_views_rerunnable": true,
+  "readme_relative_links_resolve": true,
+  "xlsx_sheets": 5,
+  "xlsx_formula_errors": 0,
+  "xlsx_native_charts": 1,
+  "xlsx_cached_headlines_match_source": true,
+  "xlsx_series_bindings_and_colors_verified": true
+}

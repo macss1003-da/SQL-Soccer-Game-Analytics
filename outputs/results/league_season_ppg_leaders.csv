@@ -1,0 +1,91 @@
+﻿league,season,team_api_id,team,played,points,ppg,ppg_rank,coverage_note
+Belgium Jupiler League,2008/2009,8635,RSC Anderlecht,34,77,2.264705882352941,1,Interpret within observed stages and competition format
+Belgium Jupiler League,2008/2009,9985,Standard de Liège,34,77,2.264705882352941,1,Interpret within observed stages and competition format
+Belgium Jupiler League,2009/2010,8635,RSC Anderlecht,28,69,2.4642857142857144,1,Interpret within observed stages and competition format
+Belgium Jupiler League,2010/2011,8635,RSC Anderlecht,30,65,2.1666666666666665,1,Interpret within observed stages and competition format
+Belgium Jupiler League,2011/2012,8635,RSC Anderlecht,30,67,2.2333333333333334,1,Interpret within observed stages and competition format
+Belgium Jupiler League,2012/2013,8635,RSC Anderlecht,30,67,2.2333333333333334,1,Interpret within observed stages and competition format
+Belgium Jupiler League,2013/2014,8573,KV Oostende,6,14,2.3333333333333335,1,"Narrow subset: 12 matches, 4 observed teams"
+Belgium Jupiler League,2014/2015,8342,Club Brugge KV,30,61,2.033333333333333,1,Interpret within observed stages and competition format
+Belgium Jupiler League,2015/2016,8342,Club Brugge KV,30,64,2.1333333333333333,1,Interpret within observed stages and competition format
+England Premier League,2008/2009,10260,Manchester United,38,90,2.3684210526315788,1,Observed schedule reviewed; official completeness not verified
+England Premier League,2009/2010,8455,Chelsea,38,86,2.263157894736842,1,Observed schedule reviewed; official completeness not verified
+England Premier League,2010/2011,10260,Manchester United,38,80,2.1052631578947367,1,Observed schedule reviewed; official completeness not verified
+England Premier League,2011/2012,8456,Manchester City,38,89,2.3421052631578947,1,Observed schedule reviewed; official completeness not verified
+England Premier League,2011/2012,10260,Manchester United,38,89,2.3421052631578947,1,Observed schedule reviewed; official completeness not verified
+England Premier League,2012/2013,10260,Manchester United,38,89,2.3421052631578947,1,Observed schedule reviewed; official completeness not verified
+England Premier League,2013/2014,8456,Manchester City,38,86,2.263157894736842,1,Observed schedule reviewed; official completeness not verified
+England Premier League,2014/2015,8455,Chelsea,38,87,2.289473684210526,1,Observed schedule reviewed; official completeness not verified
+England Premier League,2015/2016,8197,Leicester City,38,81,2.1315789473684212,1,Observed schedule reviewed; official completeness not verified
+France Ligue 1,2008/2009,9827,Girondins de Bordeaux,38,80,2.1052631578947367,1,Observed schedule reviewed; official completeness not verified
+France Ligue 1,2009/2010,8592,Olympique de Marseille,38,78,2.0526315789473686,1,Observed schedule reviewed; official completeness not verified
+France Ligue 1,2010/2011,8639,LOSC Lille,38,76,2.0,1,Observed schedule reviewed; official completeness not verified
+France Ligue 1,2011/2012,10249,Montpellier Hérault SC,38,82,2.1578947368421053,1,Observed schedule reviewed; official completeness not verified
+France Ligue 1,2012/2013,9847,Paris Saint-Germain,38,83,2.1842105263157894,1,Observed schedule reviewed; official completeness not verified
+France Ligue 1,2013/2014,9847,Paris Saint-Germain,38,89,2.3421052631578947,1,Observed schedule reviewed; official completeness not verified
+France Ligue 1,2014/2015,9847,Paris Saint-Germain,38,83,2.1842105263157894,1,Observed schedule reviewed; official completeness not verified
+France Ligue 1,2015/2016,9847,Paris Saint-Germain,38,96,2.526315789473684,1,Observed schedule reviewed; official completeness not verified
+Germany 1. Bundesliga,2008/2009,8721,VfL Wolfsburg,34,69,2.0294117647058822,1,Observed schedule reviewed; official completeness not verified
+Germany 1. Bundesliga,2009/2010,9823,FC Bayern Munich,34,70,2.0588235294117645,1,Observed schedule reviewed; official completeness not verified
+Germany 1. Bundesliga,2010/2011,9789,Borussia Dortmund,34,75,2.2058823529411766,1,Observed schedule reviewed; official completeness not verified
+Germany 1. Bundesliga,2011/2012,9789,Borussia Dortmund,34,81,2.3823529411764706,1,Observed schedule reviewed; official completeness not verified
+Germany 1. Bundesliga,2012/2013,9823,FC Bayern Munich,34,91,2.676470588235294,1,Observed schedule reviewed; official completeness not verified
+Germany 1. Bundesliga,2013/2014,9823,FC Bayern Munich,34,90,2.6470588235294117,1,Observed schedule reviewed; official completeness not verified
+Germany 1. Bundesliga,2014/2015,9823,FC Bayern Munich,34,79,2.323529411764706,1,Observed schedule reviewed; official completeness not verified
+Germany 1. Bundesliga,2015/2016,9823,FC Bayern Munich,34,88,2.588235294117647,1,Observed schedule reviewed; official completeness not verified
+Italy Serie A,2008/2009,8636,Inter,38,84,2.210526315789474,1,Observed schedule reviewed; official completeness not verified
+Italy Serie A,2009/2010,8636,Inter,38,82,2.1578947368421053,1,Observed schedule reviewed; official completeness not verified
+Italy Serie A,2010/2011,8564,Milan,38,82,2.1578947368421053,1,Observed schedule reviewed; official completeness not verified
+Italy Serie A,2011/2012,9885,Juventus,35,79,2.257142857142857,1,"Uneven schedule: 358 matches, 34-38 games per team"
+Italy Serie A,2012/2013,9885,Juventus,38,87,2.289473684210526,1,Observed schedule reviewed; official completeness not verified
+Italy Serie A,2013/2014,9885,Juventus,38,102,2.6842105263157894,1,Observed schedule reviewed; official completeness not verified
+Italy Serie A,2014/2015,9885,Juventus,38,87,2.289473684210526,1,"Uneven schedule: 379 matches, 37-38 games per team"
+Italy Serie A,2015/2016,9885,Juventus,38,91,2.3947368421052633,1,Observed schedule reviewed; official completeness not verified
+Netherlands Eredivisie,2008/2009,10229,AZ,34,80,2.3529411764705883,1,Observed schedule reviewed; official completeness not verified
+Netherlands Eredivisie,2009/2010,8611,FC Twente,34,86,2.5294117647058822,1,Observed schedule reviewed; official completeness not verified
+Netherlands Eredivisie,2010/2011,8593,Ajax,34,73,2.1470588235294117,1,Observed schedule reviewed; official completeness not verified
+Netherlands Eredivisie,2011/2012,8593,Ajax,34,76,2.235294117647059,1,Observed schedule reviewed; official completeness not verified
+Netherlands Eredivisie,2012/2013,8593,Ajax,34,76,2.235294117647059,1,Observed schedule reviewed; official completeness not verified
+Netherlands Eredivisie,2013/2014,8593,Ajax,34,71,2.088235294117647,1,Observed schedule reviewed; official completeness not verified
+Netherlands Eredivisie,2014/2015,8640,PSV,34,88,2.588235294117647,1,Observed schedule reviewed; official completeness not verified
+Netherlands Eredivisie,2015/2016,8640,PSV,34,84,2.4705882352941178,1,Observed schedule reviewed; official completeness not verified
+Poland Ekstraklasa,2008/2009,10265,Wisła Kraków,30,64,2.1333333333333333,1,Interpret within observed stages and competition format
+Poland Ekstraklasa,2009/2010,2182,Lech Poznań,30,65,2.1666666666666665,1,Interpret within observed stages and competition format
+Poland Ekstraklasa,2010/2011,10265,Wisła Kraków,30,56,1.8666666666666667,1,Interpret within observed stages and competition format
+Poland Ekstraklasa,2011/2012,8025,Śląsk Wrocław,30,56,1.8666666666666667,1,Interpret within observed stages and competition format
+Poland Ekstraklasa,2012/2013,8673,Legia Warszawa,30,67,2.2333333333333334,1,Interpret within observed stages and competition format
+Poland Ekstraklasa,2013/2014,8673,Legia Warszawa,30,63,2.1,1,Interpret within observed stages and competition format
+Poland Ekstraklasa,2014/2015,8673,Legia Warszawa,30,56,1.8666666666666667,1,Interpret within observed stages and competition format
+Poland Ekstraklasa,2015/2016,8673,Legia Warszawa,30,60,2.0,1,Interpret within observed stages and competition format
+Portugal Liga ZON Sagres,2008/2009,9773,FC Porto,30,70,2.3333333333333335,1,Observed schedule reviewed; official completeness not verified
+Portugal Liga ZON Sagres,2009/2010,9772,SL Benfica,30,76,2.533333333333333,1,Observed schedule reviewed; official completeness not verified
+Portugal Liga ZON Sagres,2010/2011,9773,FC Porto,30,84,2.8,1,Observed schedule reviewed; official completeness not verified
+Portugal Liga ZON Sagres,2011/2012,9773,FC Porto,30,75,2.5,1,Observed schedule reviewed; official completeness not verified
+Portugal Liga ZON Sagres,2012/2013,9773,FC Porto,30,78,2.6,1,Observed schedule reviewed; official completeness not verified
+Portugal Liga ZON Sagres,2013/2014,9772,SL Benfica,30,74,2.466666666666667,1,Observed schedule reviewed; official completeness not verified
+Portugal Liga ZON Sagres,2014/2015,9772,SL Benfica,34,85,2.5,1,Observed schedule reviewed; official completeness not verified
+Portugal Liga ZON Sagres,2015/2016,9772,SL Benfica,34,88,2.588235294117647,1,Observed schedule reviewed; official completeness not verified
+Scotland Premier League,2008/2009,8548,Rangers,38,86,2.263157894736842,1,Interpret within observed stages and competition format
+Scotland Premier League,2009/2010,8548,Rangers,38,87,2.289473684210526,1,Interpret within observed stages and competition format
+Scotland Premier League,2010/2011,8548,Rangers,38,93,2.4473684210526314,1,Interpret within observed stages and competition format
+Scotland Premier League,2011/2012,9925,Celtic,38,93,2.4473684210526314,1,Interpret within observed stages and competition format
+Scotland Premier League,2012/2013,9925,Celtic,38,79,2.0789473684210527,1,Interpret within observed stages and competition format
+Scotland Premier League,2013/2014,9925,Celtic,38,99,2.6052631578947367,1,Interpret within observed stages and competition format
+Scotland Premier League,2014/2015,9925,Celtic,38,92,2.4210526315789473,1,Interpret within observed stages and competition format
+Scotland Premier League,2015/2016,9925,Celtic,38,86,2.263157894736842,1,Interpret within observed stages and competition format
+Spain LIGA BBVA,2008/2009,8634,FC Barcelona,38,87,2.289473684210526,1,Observed schedule reviewed; official completeness not verified
+Spain LIGA BBVA,2009/2010,8634,FC Barcelona,38,99,2.6052631578947367,1,Observed schedule reviewed; official completeness not verified
+Spain LIGA BBVA,2010/2011,8634,FC Barcelona,38,96,2.526315789473684,1,Observed schedule reviewed; official completeness not verified
+Spain LIGA BBVA,2011/2012,8633,Real Madrid CF,38,100,2.6315789473684212,1,Observed schedule reviewed; official completeness not verified
+Spain LIGA BBVA,2012/2013,8634,FC Barcelona,38,100,2.6315789473684212,1,Observed schedule reviewed; official completeness not verified
+Spain LIGA BBVA,2013/2014,9906,Atlético Madrid,38,90,2.3684210526315788,1,Observed schedule reviewed; official completeness not verified
+Spain LIGA BBVA,2014/2015,8634,FC Barcelona,38,94,2.473684210526316,1,Observed schedule reviewed; official completeness not verified
+Spain LIGA BBVA,2015/2016,8634,FC Barcelona,38,91,2.3947368421052633,1,Observed schedule reviewed; official completeness not verified
+Switzerland Super League,2008/2009,10243,FC Zürich,36,79,2.1944444444444446,1,Interpret within observed stages and competition format
+Switzerland Super League,2009/2010,9931,FC Basel,36,80,2.2222222222222223,1,Interpret within observed stages and competition format
+Switzerland Super League,2010/2011,9931,FC Basel,36,73,2.0277777777777777,1,Interpret within observed stages and competition format
+Switzerland Super League,2011/2012,9931,FC Basel,34,74,2.176470588235294,1,"Uneven schedule: 162 matches, 18-34 games per team"
+Switzerland Super League,2012/2013,9931,FC Basel,36,72,2.0,1,Interpret within observed stages and competition format
+Switzerland Super League,2013/2014,9931,FC Basel,36,72,2.0,1,Interpret within observed stages and competition format
+Switzerland Super League,2014/2015,9931,FC Basel,36,78,2.1666666666666665,1,Interpret within observed stages and competition format
+Switzerland Super League,2015/2016,9931,FC Basel,36,83,2.3055555555555554,1,Interpret within observed stages and competition format

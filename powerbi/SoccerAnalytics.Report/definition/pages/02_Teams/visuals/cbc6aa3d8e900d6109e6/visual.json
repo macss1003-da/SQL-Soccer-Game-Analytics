@@ -1,0 +1,434 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "cbc6aa3d8e900d6109e6",
+  "position": {
+    "x": 32,
+    "y": 662,
+    "z": 32000,
+    "width": 1376,
+    "height": 250,
+    "tabOrder": 32000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#E0E8E5'"
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Thành tích từng đội–mùa • thứ hạng mô tả từ SQL'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#102E35'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Segoe UI Semibold'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactTeamSeason"
+                    }
+                  },
+                  "Property": "league"
+                }
+              },
+              "queryRef": "FactTeamSeason.league",
+              "nativeQueryRef": "Giải",
+              "displayName": "Giải"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactTeamSeason"
+                    }
+                  },
+                  "Property": "season"
+                }
+              },
+              "queryRef": "FactTeamSeason.season",
+              "nativeQueryRef": "Mùa",
+              "displayName": "Mùa"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactTeamSeason"
+                    }
+                  },
+                  "Property": "team_label"
+                }
+              },
+              "queryRef": "FactTeamSeason.team_label",
+              "nativeQueryRef": "Đội",
+              "displayName": "Đội"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactTeamSeason"
+                    }
+                  },
+                  "Property": "ppg_rank"
+                }
+              },
+              "queryRef": "FactTeamSeason.ppg_rank",
+              "nativeQueryRef": "Hạng PPG",
+              "displayName": "Hạng PPG"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactTeamSeason"
+                    }
+                  },
+                  "Property": "played"
+                }
+              },
+              "queryRef": "FactTeamSeason.played",
+              "nativeQueryRef": "Trận",
+              "displayName": "Trận"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactTeamSeason"
+                    }
+                  },
+                  "Property": "wins"
+                }
+              },
+              "queryRef": "FactTeamSeason.wins",
+              "nativeQueryRef": "Thắng",
+              "displayName": "Thắng"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactTeamSeason"
+                    }
+                  },
+                  "Property": "draws"
+                }
+              },
+              "queryRef": "FactTeamSeason.draws",
+              "nativeQueryRef": "Hòa",
+              "displayName": "Hòa"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactTeamSeason"
+                    }
+                  },
+                  "Property": "losses"
+                }
+              },
+              "queryRef": "FactTeamSeason.losses",
+              "nativeQueryRef": "Thua",
+              "displayName": "Thua"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactTeamSeason"
+                    }
+                  },
+                  "Property": "points"
+                }
+              },
+              "queryRef": "FactTeamSeason.points",
+              "nativeQueryRef": "Điểm",
+              "displayName": "Điểm"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactTeamSeason"
+                    }
+                  },
+                  "Property": "ppg"
+                }
+              },
+              "queryRef": "FactTeamSeason.ppg",
+              "nativeQueryRef": "PPG",
+              "displayName": "PPG"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactTeamSeason"
+                    }
+                  },
+                  "Property": "goals_for"
+                }
+              },
+              "queryRef": "FactTeamSeason.goals_for",
+              "nativeQueryRef": "Bàn thắng",
+              "displayName": "Bàn thắng"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactTeamSeason"
+                    }
+                  },
+                  "Property": "goals_against"
+                }
+              },
+              "queryRef": "FactTeamSeason.goals_against",
+              "nativeQueryRef": "Bàn thua",
+              "displayName": "Bàn thua"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#102E35'"
+                    }
+                  }
+                }
+              }
+            },
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#EBF1EF'"
+                    }
+                  }
+                }
+              }
+            },
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
+            "fontColorPrimary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#102E35'"
+                    }
+                  }
+                }
+              }
+            },
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "rowPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

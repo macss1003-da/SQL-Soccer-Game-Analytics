@@ -1,0 +1,39 @@
+{
+  "name": "Soccer Portfolio",
+  "dataColors": [
+    "#137C75",
+    "#91A4A7",
+    "#B8EF79",
+    "#E0AE62",
+    "#B85247",
+    "#497FB1"
+  ],
+  "background": "#FFFFFF",
+  "foreground": "#102E35",
+  "tableAccent": "#137C75",
+  "good": "#137C75",
+  "neutral": "#DDA653",
+  "bad": "#B85247",
+  "textClasses": {
+    "callout": {
+      "fontFace": "Segoe UI",
+      "fontSize": 30,
+      "color": "#102E35"
+    },
+    "title": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 14,
+      "color": "#102E35"
+    },
+    "header": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 12,
+      "color": "#102E35"
+    },
+    "label": {
+      "fontFace": "Segoe UI",
+      "fontSize": 11,
+      "color": "#587077"
+    }
+  }
+}

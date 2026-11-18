@@ -1,0 +1,129 @@
+{
+  "status": "passed",
+  "public_schema_files_validated": 88,
+  "visual_field_references_resolved": 116,
+  "data_and_structure_checks": [
+    {
+      "check": "All public JSON schemas validate",
+      "passed": true
+    },
+    {
+      "check": "50 inline Power Query payloads decode and types match",
+      "passed": true
+    },
+    {
+      "check": "38 raw results preserved exactly",
+      "passed": true
+    },
+    {
+      "check": "Relationship FactLeagueSeason → DimLeague",
+      "passed": true
+    },
+    {
+      "check": "Relationship FactLeagueSeason → DimSeason",
+      "passed": true
+    },
+    {
+      "check": "Relationship FactTeamSeason → DimLeague",
+      "passed": true
+    },
+    {
+      "check": "Relationship FactTeamSeason → DimSeason",
+      "passed": true
+    },
+    {
+      "check": "Relationship FactTeamSeason → DimTeam",
+      "passed": true
+    },
+    {
+      "check": "Relationship FactSeasonChange → DimLeague",
+      "passed": true
+    },
+    {
+      "check": "Relationship FactSeasonChange → DimSeason",
+      "passed": true
+    },
+    {
+      "check": "Relationship FactSeasonChange → DimTeam",
+      "passed": true
+    },
+    {
+      "check": "88 league-seasons / 1481 team-seasons / 1110 pairs",
+      "passed": true
+    },
+    {
+      "check": "Matches and goals reconcile",
+      "passed": true
+    },
+    {
+      "check": "Team appearances and goals reconcile",
+      "passed": true
+    },
+    {
+      "check": "Team-season and pair keys unique",
+      "passed": true
+    },
+    {
+      "check": "Team labels distinguish different API IDs without merging duplicate names",
+      "passed": true
+    },
+    {
+      "check": "All pairs are consecutive",
+      "passed": true
+    },
+    {
+      "check": "1:1 venue merge and original SQL ranks retained",
+      "passed": true
+    },
+    {
+      "check": "Home and away totals reconcile",
+      "passed": true
+    },
+    {
+      "check": "Stable group matches",
+      "passed": true
+    },
+    {
+      "check": "Stable group consecutive pairs",
+      "passed": true
+    },
+    {
+      "check": "Premier League 3040 matches and 8240 goals",
+      "passed": true
+    },
+    {
+      "check": "Leicester 81 points / 38 matches / rank 1 / +40 points",
+      "passed": true
+    },
+    {
+      "check": "Manchester United 2010/11 home/away PPG",
+      "passed": true
+    },
+    {
+      "check": "Missing previous seasons do not create zero pairs",
+      "passed": true
+    },
+    {
+      "check": "22 checks pass and 4 warnings retained",
+      "passed": true
+    },
+    {
+      "check": "All visual and sort field references resolve; all visuals fit canvas",
+      "passed": true
+    },
+    {
+      "check": "Weighted ratios use SUM numerator and denominator",
+      "passed": true
+    },
+    {
+      "check": "44 DAX measure and column references resolve",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "runtime_limitations": [
+    "Power BI Desktop is unavailable in this environment. The PBIP has not been opened or refreshed in Desktop.",
+    "DAX and Power Query payload syntax was authored for documented formats; native engine execution and UI rendering are not verified.",
+    "Schema validation and independently reconciled data totals do not guarantee native application behavior."
+  ]
+}
